@@ -32,7 +32,12 @@ export type RouteProps = (
 export type RouteConfig = {
   filter?: RouteFilter;
   component: React.ComponentType<RouteProps>
-  props: Pick<RouteProps, 'path' | 'component' | 'routeConfigs'>;
+  props: Pick<RouteProps,
+    'path' |
+    'exact' |
+    'component' |
+    'routeConfigs'
+  >;
 };
 
 export type RouteFilter<S = any> = (
