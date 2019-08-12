@@ -24,20 +24,18 @@ export type RouteProps = (
   RouteFilterPayload &
   {
     path: string;
-    component: React.ComponentType<any>;
-    routeConfigs?: RouteConfig[];
   }
 );
 
 export type RouteConfig = {
   filter?: RouteFilter;
   component: React.ComponentType<RouteProps>
-  props: Pick<RouteProps,
-    'path' |
-    'exact' |
-    'component' |
-    'routeConfigs'
-  >;
+  props: {
+    path: string;
+    component: React.ComponentType<RouteComponentProps>;
+    exact?: boolean;
+    routeConfigs?: RouteConfig[];
+  }
 };
 
 export type RouteFilter<S = any> = (

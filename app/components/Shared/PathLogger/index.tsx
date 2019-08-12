@@ -1,6 +1,6 @@
 import React from 'react';
 import { RouteComponentProps } from 'types/routes';
-import Conditional from 'components/Shared/Conditional';
+import Render from 'components/Shared/Render';
 import Label from './Label';
 
 type PathLoggerProps = (
@@ -16,11 +16,11 @@ const PathLogger: React.SFC<PathLoggerProps> = ({
     <Label>
       {`Current path: ${location.pathname}`}
     </Label>
-    <Conditional render={state.from}>
+    <Render when={state.from}>
       <Label>
         {`Redirected from: ${JSON.stringify(state.from)}`}
       </Label>
-    </Conditional>
+    </Render>
   </div>
 );
 

@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import { BrowserRouter } from 'react-router-dom';
+import App from './containers/App';
 
 const render = (Component: React.ComponentType<any>) => (
   ReactDOM.render(
-    <div>
-      {<Component />}
-    </div>,
+    <BrowserRouter>
+      <Component />
+    </BrowserRouter>,
     document.getElementById('root')
   )
 )
@@ -14,7 +15,7 @@ const render = (Component: React.ComponentType<any>) => (
 render(App);
 
 if (module.hot) {
-  module.hot.accept('./components/App', () => {
-    render(require('./components/App').default);
+  module.hot.accept('./containers/App', () => {
+    render(require('./containers/App').default);
   });
 }
