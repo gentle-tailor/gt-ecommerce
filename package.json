@@ -41,6 +41,8 @@
     "webpack-merge": "4.2.1"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.15",
+    "@emotion/styled": "^10.0.15",
     "@types/react-router-dom": "^4.3.4",
     "body-parser": "1.19.0",
     "consola": "2.9.0",
@@ -51,6 +53,7 @@
     "react-dom": "^16.8.6",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
+    "sanitize.css": "^11.0.0",
     "typescript": "3.5.3"
   }
 }
