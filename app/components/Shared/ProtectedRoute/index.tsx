@@ -15,8 +15,8 @@ const ProtectedRoute = React.memo<ProtectedRouteProps>(
       : <MemoryRedirect {...props} />
   ),
   R.useWith(R.equals, [
-    R.pick(['location']),
-    R.pick(['location'])
+    R.prop('location'),
+    R.prop('location')
   ])
 );
 
