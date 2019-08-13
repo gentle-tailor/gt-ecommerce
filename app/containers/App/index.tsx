@@ -3,7 +3,7 @@ import Routes from 'containers/Routes';
 
 const App = () => (
   <h3>
-    Hello
+    SCROLL MORE FOR GOODNESS
     <div>
       <Routes />
     </div>
