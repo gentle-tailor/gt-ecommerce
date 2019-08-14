@@ -11,8 +11,8 @@ import Auth from 'containers/Routes/Auth';
 import Customize from 'containers/Routes/Customize';
 import Info from 'containers/Routes/Info';
 import Order from 'containers/Routes/Order';
+import Root from 'containers/Routes/Root';
 import Shop from 'containers/Routes/Shop';
-import PathLogger from 'components/Shared/PathLogger';
 import ProtectedRoute from 'components/Shared/ProtectedRoute';
 
 const routeConfigs: RouteConfig[] = [
@@ -20,7 +20,7 @@ const routeConfigs: RouteConfig[] = [
     props: {
       path: PATHS.PATH_ROOT,
       exact: true,
-      component: PathLogger,
+      component: Root,
     },
     component: ProtectedRoute,
   },
