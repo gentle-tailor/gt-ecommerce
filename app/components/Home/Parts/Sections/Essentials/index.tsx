@@ -1,4 +1,6 @@
 import React from 'react';
+import { PATH_SHOP } from 'routes/paths';
+import Link from 'components/Shared/Link';
 import Preview from 'components/Shared/Callouts/Preview';
 import PreviewPrimary from 'components/Shared/Cards/PreviewPrimary';
 import PreviewSecondary from 'components/Shared/Cards/PreviewSecondary';
@@ -53,7 +55,9 @@ const Essentials: React.SFC = () => (
       </Preview.Secondary>
     </Preview>
     <Footer align="right">
-      VIEW ALL...
+      <Link to={PATH_SHOP}>
+        VIEW ALL...
+      </Link>
     </Footer>
   </React.Fragment>
 );

@@ -6,8 +6,15 @@ import ProtectedRoute from 'components/Shared/Routes/ProtectedRoute';
 const routeConfigs: RouteConfig[] = [
   {
     props: {
-      path: PATHS.PATH_INFO,
+      path: PATHS.PATH_EDITORIALS,
       exact: true,
+      component: PathLogger,
+    },
+    component: ProtectedRoute,
+  },
+  {
+    props: {
+      path: PATHS.PATH_EDITORIALS_ENTRY,
       component: PathLogger,
     },
     component: ProtectedRoute,

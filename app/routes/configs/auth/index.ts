@@ -1,7 +1,7 @@
 import * as PATHS from 'routes/paths';
 import { RouteConfig } from 'types/routes';
-import PathLogger from 'components/Shared/PathLogger';
-import ProtectedRoute from 'components/Shared/ProtectedRoute';
+import PathLogger from 'components/Shared/Routes/PathLogger';
+import ProtectedRoute from 'components/Shared/Routes/ProtectedRoute';
 
 const routeConfigs: RouteConfig[] = [
   {

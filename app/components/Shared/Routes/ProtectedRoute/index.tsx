@@ -2,7 +2,7 @@ import * as R from 'ramda';
 import React from 'react';
 import { Route } from 'react-router';
 import { RouteProps } from 'types/routes';
-import MemoryRedirect from 'components/Shared/MemoryRedirect';
+import MemoryRedirect from 'components/Shared/Routes/MemoryRedirect';
 
 type ProtectedRouteProps = (
   RouteProps

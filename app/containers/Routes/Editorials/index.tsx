@@ -3,11 +3,11 @@ import { Switch } from 'react-router';
 import { RouteComponentProps } from 'types/routes';
 import RenderRouteConfigs from 'components/Shared/Routes/RenderRouteConfigs';
 
-type AccountProps = (
+type EditorialsProps = (
   RouteComponentProps
 );
 
-const Account: React.SFC<AccountProps> = ({
+const Editorials: React.SFC<EditorialsProps> = ({
   routeConfigs = [],
   ...rest
 }) => (
@@ -16,4 +16,4 @@ const Account: React.SFC<AccountProps> = ({
   </Switch>
 );
 
-export default Account;
+export default Editorials;

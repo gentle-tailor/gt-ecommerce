@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter, Switch, RouteComponentProps } from 'react-router';
 import routeConfigs from 'routes/configs';
-import RenderRouteConfigs from 'components/Shared/RenderRouteConfigs';
+import RenderRouteConfigs from 'components/Shared/Routes/RenderRouteConfigs';
 import PageLayout from 'components/Shared/PageLayout';
 
 type RootProps = (
