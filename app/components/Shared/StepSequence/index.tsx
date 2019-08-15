@@ -5,10 +5,14 @@ import Indicator from './Indicator';
 
 type StepSequenceProps = {
   children: React.ReactNode;
+  className?: string;
 }
 
-const StepSequence: React.SFC<StepSequenceProps> = ({ children }) => (
-  <Container>
+const StepSequence: React.SFC<StepSequenceProps> = ({
+  children,
+  className,
+}) => (
+  <Container className={className}>
     {intersperse(
       <Indicator />,
       React.Children.toArray(children)
