@@ -1,4 +1,6 @@
 import React from 'react';
+import { PATH_EDITORIALS } from 'routes/paths';
+import Link from 'components/Shared/Link';
 import Preview from 'components/Shared/Callouts/Preview';
 import PreviewPrimary from 'components/Shared/Cards/PreviewPrimary';
 import PreviewSecondary from 'components/Shared/Cards/PreviewSecondary';
@@ -53,7 +55,9 @@ const Editorials: React.SFC = () => (
       </Preview.Primary>
     </Preview>
     <Footer align="left">
-      VIEW ALL...
+      <Link to={PATH_EDITORIALS}>
+        VIEW ALL...
+      </Link>
     </Footer>
   </React.Fragment>
 );

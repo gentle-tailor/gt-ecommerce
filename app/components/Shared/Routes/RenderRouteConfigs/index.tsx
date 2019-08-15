@@ -1,6 +1,6 @@
 import React from 'react';
 import { RouteConfig } from 'types/routes';
-import RenderRouteConfig from 'components/Shared/RenderRouteConfig';
+import RenderRouteConfig from 'components/Shared/Routes/RenderRouteConfig';
 
 type RenderRouteConfigsProps = {
   routeConfigs: RouteConfig[];

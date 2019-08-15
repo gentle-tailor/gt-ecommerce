@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch } from 'react-router';
 import { RouteComponentProps } from 'types/routes';
-import RenderRouteConfigs from 'components/Shared/RenderRouteConfigs';
+import RenderRouteConfigs from 'components/Shared/Routes/RenderRouteConfigs';
 
 type OrderProps = (
   RouteComponentProps

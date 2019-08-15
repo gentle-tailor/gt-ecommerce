@@ -23,5 +23,6 @@ injectGlobal`
 
   a {
     text-decoration: none;
+    color: ${font.color.secondary};
   }
 `

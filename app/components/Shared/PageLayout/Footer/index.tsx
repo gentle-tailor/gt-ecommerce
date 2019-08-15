@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from 'components/Shared/Footer';
 import Shell from 'components/Shared/Shell';
+import LinkExternal from 'components/Shared/LinkExternal';
 
 const Footer: React.SFC = () => (
   <React.Fragment>
@@ -8,9 +9,23 @@ const Footer: React.SFC = () => (
       <Shell>
         <Shell.Block>
           <span>© 2019 GT Studios</span>
-          <span>gentle@tailor.com</span>
-          <span>Instagram</span>
-          <span>Facebook</span>
+          <LinkExternal
+            href="mailto:gentle@tailor.com"
+          >
+            gentle@tailor.com
+          </LinkExternal>
+          <LinkExternal
+            href="https://instagram.com"
+            target="_blank"
+          >
+            Instagram
+          </LinkExternal>
+          <LinkExternal
+            href="https://facebook.com"
+            target="_blank"
+          >
+            Facebook
+          </LinkExternal>
         </Shell.Block>
       </Shell>
     </Container>
