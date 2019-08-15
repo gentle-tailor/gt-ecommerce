@@ -29,7 +29,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(jpg|png|gif|eot|svg|otf|ttf|woff|woff2)$/,
+        test: /\.(jpg|png|gif|eot|otf|ttf|woff|woff2)$/,
         use: 'file-loader',
       },
       {
@@ -39,6 +39,10 @@ module.exports = {
       {
         test: /\.json$/,
         use: 'json-loader',
+      },
+      {
+        test: /\.svg$/,
+        use: '@svgr/webpack',
       },
     ],
   },
