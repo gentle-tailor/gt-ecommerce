@@ -14,10 +14,10 @@ const Home: React.SFC = () => (
       <Featured />
     </Section>
     <Section>
-      <Seasonal />
+      <Customize />
     </Section>
     <Section>
-      <Customize />
+      <Seasonal />
     </Section>
     <Section>
       <Essentials />

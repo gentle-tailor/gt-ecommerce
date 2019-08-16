@@ -1,18 +1,24 @@
+import { isValidElement } from 'react';
 import styled from '@emotion/styled';
-import Box from 'components/Shared/Box';
 
 type MetaProps = {
   children: React.ReactNode;
+  align?: 'left' | 'right';
 };
 
-const Meta = styled(Box)<MetaProps>`
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 3em;
-  height: 100%;
-  text-align: left;
+const Meta = styled('div')<MetaProps>`
+  position: absolute;
+  z-index: 1;
+  transform: translate(0, 75%);
+  ${props => (
+    props.align === 'right'
+      ? 'right: 0'
+      : 'left:  0'
+  )}
 `;
+
+export const isMeta = (child: React.ReactChild): child is React.ReactElement<MetaProps> => (
+  isValidElement(child) && child.type === Meta
+);
 
 export default Meta;

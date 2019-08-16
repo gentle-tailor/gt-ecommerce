@@ -1,64 +1,65 @@
 import React from 'react';
 import { PATH_EDITORIALS } from 'routes/paths';
 import Link from 'components/Shared/Link';
-import Preview from 'components/Shared/Callouts/Preview';
-import PreviewPrimary from 'components/Shared/Cards/PreviewPrimary';
-import PreviewSecondary from 'components/Shared/Cards/PreviewSecondary';
+import Secondary from 'components/Shared/Callouts/Secondary';
 import Heading from 'components/Shared/Heading';
-import HeadingAuto from 'components/Shared/HeadingAuto';
-import Header from 'components/Home/Parts/Sections/Header';
-import Footer from 'components/Home/Parts/Sections/Footer';
+import Slides from 'components/Shared/Slides';
+import Slide from 'components/Shared/Slide';
 
 const Editorials: React.SFC = () => (
   <React.Fragment>
-    <Header align="right">
-      <Heading level={2}>
-        EDITORIALS
-      </Heading>
-    </Header>
-    <Preview>
-      <Preview.Secondary>
-        <PreviewSecondary>
-          <PreviewSecondary.Media />
-          <PreviewSecondary.Meta>
-            STORY 00
-          </PreviewSecondary.Meta>
-        </PreviewSecondary>
-        <PreviewSecondary>
-          <PreviewSecondary.Media />
-          <PreviewSecondary.Meta>
-            STORY 01
-          </PreviewSecondary.Meta>
-        </PreviewSecondary>
-        <PreviewSecondary>
-          <PreviewSecondary.Media />
-          <PreviewSecondary.Meta>
-            STORY 02
-          </PreviewSecondary.Meta>
-        </PreviewSecondary>
-        <PreviewSecondary>
-          <PreviewSecondary.Media />
-          <PreviewSecondary.Meta>
-            STORY 03
-          </PreviewSecondary.Meta>
-        </PreviewSecondary>
-      </Preview.Secondary>
-      <Preview.Primary>
-        <PreviewPrimary>
-          <PreviewPrimary.Media />
-          <PreviewPrimary.Meta>
-            <HeadingAuto>
-              LATEST
-            </HeadingAuto>
-          </PreviewPrimary.Meta>
-        </PreviewPrimary>
-      </Preview.Primary>
-    </Preview>
-    <Footer align="left">
-      <Link to={PATH_EDITORIALS}>
-        VIEW ALL...
-      </Link>
-    </Footer>
+    <Secondary>
+      <Secondary.Media mode="bald">
+        <Slides>
+          <Slide>
+            <Slide.Media />
+            <Slide.Meta>
+              STORY 01
+            </Slide.Meta>
+          </Slide>
+          <Slide>
+            <Slide.Media />
+            <Slide.Meta>
+              STORY 02
+            </Slide.Meta>
+          </Slide>
+          <Slide>
+            <Slide.Media />
+            <Slide.Meta>
+              STORY 03
+            </Slide.Meta>
+          </Slide>
+          <Slide>
+            <Slide.Media />
+            <Slide.Meta>
+              STORY 04
+            </Slide.Meta>
+          </Slide>
+          <Slide>
+            <Slide.Media />
+            <Slide.Meta>
+              STORY 05
+            </Slide.Meta>
+          </Slide>
+          <Slide>
+            <Slide.Media />
+            <Slide.Meta>
+              STORY 06
+            </Slide.Meta>
+          </Slide>
+        </Slides>
+      </Secondary.Media>
+      <Secondary.Meta>
+        <Heading>
+          EDITORIALS
+        </Heading>
+        <p>
+          <Link to={PATH_EDITORIALS}>
+            VIEW ALL...
+          </Link>
+        </p>
+      </Secondary.Meta>
+    </Secondary>
   </React.Fragment>
 );
 
