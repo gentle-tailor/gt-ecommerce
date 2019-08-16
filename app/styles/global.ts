@@ -25,4 +25,8 @@ injectGlobal`
     text-decoration: none;
     color: ${font.color.secondary};
   }
+
+  button:focus {
+    outline: 0;
+  }
 `

@@ -9,8 +9,7 @@ const Container = styled('div')<ContainerProps>`
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 530px;
-  height: 570px;
+  height: 500px;
 `
 
 export default Container;

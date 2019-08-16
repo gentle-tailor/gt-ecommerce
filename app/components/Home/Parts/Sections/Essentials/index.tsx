@@ -1,64 +1,59 @@
 import React from 'react';
 import { PATH_SHOP } from 'routes/paths';
 import Link from 'components/Shared/Link';
-import Preview from 'components/Shared/Callouts/Preview';
-import PreviewPrimary from 'components/Shared/Cards/PreviewPrimary';
-import PreviewSecondary from 'components/Shared/Cards/PreviewSecondary';
+import Secondary from 'components/Shared/Callouts/Secondary';
 import Heading from 'components/Shared/Heading';
-import HeadingAuto from 'components/Shared/HeadingAuto';
-import Header from 'components/Home/Parts/Sections/Header';
-import Footer from 'components/Home/Parts/Sections/Footer';
+import Slides from 'components/Shared/Slides';
+import Slide from 'components/Shared/Slide';
 
 const Essentials: React.SFC = () => (
   <React.Fragment>
-    <Header align="left">
-      <Heading level={2}>
-        ESSENTIALS
-      </Heading>
-    </Header>
-    <Preview>
-      <Preview.Primary>
-        <PreviewPrimary>
-          <PreviewPrimary.Media />
-          <PreviewPrimary.Meta>
-            <HeadingAuto>
+    <Secondary>
+      <Secondary.Meta>
+        <Heading>
+          ESSENTIALS
+        </Heading>
+        <p>
+          <Link to={PATH_SHOP}>
+            VIEW ALL...
+          </Link>
+        </p>
+      </Secondary.Meta>
+      <Secondary.Media mode="bald">
+        <Slides>
+          <Slide>
+            <Slide.Media />
+            <Slide.Meta>
               PRIMO
-            </HeadingAuto>
-          </PreviewPrimary.Meta>
-        </PreviewPrimary>
-      </Preview.Primary>
-      <Preview.Secondary>
-        <PreviewSecondary>
-          <PreviewSecondary.Media />
-          <PreviewSecondary.Meta>
-            BRUNICO
-          </PreviewSecondary.Meta>
-        </PreviewSecondary>
-        <PreviewSecondary>
-          <PreviewSecondary.Media />
-          <PreviewSecondary.Meta>
-            RAVELLO
-          </PreviewSecondary.Meta>
-        </PreviewSecondary>
-        <PreviewSecondary>
-          <PreviewSecondary.Media />
-          <PreviewSecondary.Meta>
-            MADISON
-          </PreviewSecondary.Meta>
-        </PreviewSecondary>
-        <PreviewSecondary>
-          <PreviewSecondary.Media />
-          <PreviewSecondary.Meta>
-            CARTESSIO
-          </PreviewSecondary.Meta>
-        </PreviewSecondary>
-      </Preview.Secondary>
-    </Preview>
-    <Footer align="right">
-      <Link to={PATH_SHOP}>
-        VIEW ALL...
-      </Link>
-    </Footer>
+            </Slide.Meta>
+          </Slide>
+          <Slide>
+            <Slide.Media />
+            <Slide.Meta>
+              BRUNICO
+            </Slide.Meta>
+          </Slide>
+          <Slide>
+            <Slide.Media />
+            <Slide.Meta>
+              RAVELLO
+            </Slide.Meta>
+          </Slide>
+          <Slide>
+            <Slide.Media />
+            <Slide.Meta>
+              MADISON
+            </Slide.Meta>
+          </Slide>
+          <Slide>
+            <Slide.Media />
+            <Slide.Meta>
+              CARTESSIO
+            </Slide.Meta>
+          </Slide>
+        </Slides>
+      </Secondary.Media>
+    </Secondary>
   </React.Fragment>
 );
 

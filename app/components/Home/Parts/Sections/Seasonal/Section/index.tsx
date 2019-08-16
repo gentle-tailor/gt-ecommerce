@@ -17,9 +17,7 @@ const Section = styled(Inner)<SectionProps>`
   display: flex;
   flex-direction: column;
   align-items: ${props => alignment(props.align)};
-  width: 900px;
-  max-width: 95%;
-  margin-bottom: 214px;
+  width: 100%;
 `;
 
 export default Section;

@@ -1,20 +1,20 @@
 import React from 'react';
-import Primary from 'components/Shared/Callouts/Primary';
+import Callout from 'components/Shared/Callouts/Featured';
 import Description from 'components/Shared/Callouts/Description';
 import HeadingAuto from 'components/Shared/HeadingAuto';
 
 const Featured: React.SFC = () => (
   <React.Fragment>
-    <Primary>
-      <Primary.Media />
-      <Primary.Meta>
+    <Callout>
+      <Callout.Media />
+      <Callout.Meta>
         <Description>
           <HeadingAuto>
             NEW IN
           </HeadingAuto>
         </Description>
-      </Primary.Meta>
-    </Primary>
+      </Callout.Meta>
+    </Callout>
     <span>
       EXPLORE OUR COLLECTION
     </span>
