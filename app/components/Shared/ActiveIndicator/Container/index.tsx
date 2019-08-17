@@ -7,6 +7,7 @@ type ContainerProps = {
 const Container = styled('div')<ContainerProps>`
   display: inline-block;
   position: relative;
+  min-height: 20px;
 `;
 
 export default Container;
