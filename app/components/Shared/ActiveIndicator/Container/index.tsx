@@ -4,7 +4,7 @@ type ContainerProps = {
   children: React.ReactNode;
 }
 
-const Container = styled('div')<ContainerProps>`
+const Container = styled('span')<ContainerProps>`
   display: inline-block;
   position: relative;
   min-height: 20px;

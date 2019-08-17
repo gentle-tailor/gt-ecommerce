@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="16px" viewBox="0 0 18 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="12.4222485%" x2="100%" y2="87.5777515%" id="linearGradient-1">
+            <stop stop-color="#FDFDFD" offset="0%"></stop>
+            <stop stop-color="#979797" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="customize" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-74.000000, -491.000000)" fill="url(#linearGradient-1)">
+            <g id="fabric" transform="translate(42.000000, 192.000000)">
+                <g id="likes" transform="translate(17.000000, 287.000000)">
+                    <g id="Group-2" transform="translate(15.194805, 12.511905)">
+                        <path d="M15.9086998,8.96428571 L16.2077922,8.96428571 L9.94785089,14.594666 C9.18738354,15.2786533 8.03339568,15.2786533 7.27292833,14.594666 L1.01298701,8.96428571 L1.31207946,8.96428571 C0.492428329,8.03598661 -1.42108547e-14,6.8455904 -1.42108547e-14,5.54761905 C-1.42108547e-14,2.58237593 2.57000183,0.178571429 5.74025974,0.178571429 C6.78581115,0.178571429 7.76607384,0.440028708 8.61038961,0.896854406 C9.45470538,0.440028708 10.4349681,0.178571429 11.4805195,0.178571429 C14.6507774,0.178571429 17.2207792,2.58237593 17.2207792,5.54761905 C17.2207792,6.8455904 16.7283509,8.03598661 15.9086998,8.96428571 Z" id="Combined-Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

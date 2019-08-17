@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from './Parts/Container';
+import Content from './Parts/Content';
 import Header from './Parts/Header';
 
 type CustomizeProps = {
@@ -11,7 +12,9 @@ const Customize: React.SFC<CustomizeProps> = ({
 }) => (
   <Container>
     <Header />
-    {children}
+    <Content>
+      {children}
+    </Content>
   </Container>
 );
 

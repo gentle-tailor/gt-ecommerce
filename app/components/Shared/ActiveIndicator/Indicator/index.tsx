@@ -4,7 +4,7 @@ type IndicatorProps = {
   active: boolean;
 };
 
-const Indicator = styled('div')<IndicatorProps>`
+const Indicator = styled('span')<IndicatorProps>`
   position: absolute;
   bottom: 0;
   left: 0;
