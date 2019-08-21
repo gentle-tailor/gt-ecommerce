@@ -7,12 +7,8 @@ type SectionProps = {
 const Section = styled('div')<SectionProps>`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  max-width: 95%;
-
-  & > :not(:last-child) {
-    margin-right: 60px;
-  }
+  justify-content: center;
+  margin-bottom: 214px;
 `;
 
 export default Section;

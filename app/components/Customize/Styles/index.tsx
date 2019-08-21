@@ -3,7 +3,7 @@ import Container from './Parts/Container';
 import Section from './Parts/Section';
 import Selection from './Parts/Selection';
 
-const Fabric: React.SFC = () => (
+const Styles: React.SFC = () => (
   <Container>
     <Section>
       <Selection />
@@ -11,4 +11,4 @@ const Fabric: React.SFC = () => (
   </Container>
 );
 
-export default Fabric;
+export default Styles;

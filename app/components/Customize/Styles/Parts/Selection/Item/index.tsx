@@ -1,11 +1,11 @@
 import Container from './Container';
-import Column from './Column';
-import Row from './Row';
+import Media from './Media';
+import Meta from './Meta';
 
 export default Object.assign(
   Container,
   {
-    Column,
-    Row
+    Media,
+    Meta,
   }
-)
+);

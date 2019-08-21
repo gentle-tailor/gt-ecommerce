@@ -2,6 +2,7 @@ import * as PATHS from 'routes/paths';
 import { RouteConfig } from 'types/routes';
 import Root from 'containers/Routes/Customize/Root';
 import Fabric from 'containers/Routes/Customize/Fabric';
+import Styles from 'containers/Routes/Customize/Styles';
 import ProtectedRoute from 'components/Shared/Routes/ProtectedRoute';
 
 const routeConfigs: RouteConfig[] = [
@@ -23,7 +24,7 @@ const routeConfigs: RouteConfig[] = [
   {
     props: {
       path: PATHS.PATH_CUSTOMIZE_STYLE,
-      component: () => null,
+      component: Styles,
     },
     component: ProtectedRoute,
   },

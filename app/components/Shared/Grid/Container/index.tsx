@@ -1,9 +1,13 @@
 import styled from '@emotion/styled';
 
-const Container = styled('div')`
+export type ContainerProps = {
+  children: React.ReactNode;
+  className?: string;
+};
+
+const Container = styled('div')<ContainerProps>`
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
 `;
 
 export default Container;

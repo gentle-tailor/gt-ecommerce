@@ -6,8 +6,11 @@ type ContainerProps = {
 
 const Container = styled('div')<ContainerProps>`
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
 `;
 
 export default Container;

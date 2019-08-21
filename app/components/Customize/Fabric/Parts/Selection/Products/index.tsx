@@ -5,105 +5,111 @@ import Product from 'components/Shared/Cards/Product';
 
 const Products: React.SFC = () => (
   <Grid>
-    <Grid.Column width={3}>
-      <Product>
-        <Product.Media />
-        <Product.Meta>
-          <Like count={50} />
-          <span>
-            $129.99
-          </span>
-        </Product.Meta>
-      </Product>
-    </Grid.Column>
-    <Grid.Column width={3}>
-      <Product>
-        <Product.Media />
-        <Product.Meta>
-          <Like count={50} />
-          <span>
-            $129.99
-          </span>
-        </Product.Meta>
-      </Product>
-    </Grid.Column>
-    <Grid.Column width={3}>
-      <Product>
-        <Product.Media />
-        <Product.Meta>
-          <Like count={50} />
-          <span>
-            $129.99
-          </span>
-        </Product.Meta>
-      </Product>
-    </Grid.Column>
-    <Grid.Column width={3}>
-      <Product>
-        <Product.Media />
-        <Product.Meta>
-          <Like count={50} />
-          <span>
-            $129.99
-          </span>
-        </Product.Meta>
-      </Product>
-    </Grid.Column>
-    <Grid.Column width={3}>
-      <Product>
-        <Product.Media />
-        <Product.Meta>
-          <Like count={50} />
-          <span>
-            $129.99
-          </span>
-        </Product.Meta>
-      </Product>
-    </Grid.Column>
-    <Grid.Column width={3}>
-      <Product>
-        <Product.Media />
-        <Product.Meta>
-          <Like count={50} />
-          <span>
-            $129.99
-          </span>
-        </Product.Meta>
-      </Product>
-    </Grid.Column>
-    <Grid.Column width={3}>
-      <Product>
-        <Product.Media />
-        <Product.Meta>
-          <Like count={50} />
-          <span>
-            $129.99
-          </span>
-        </Product.Meta>
-      </Product>
-    </Grid.Column>
-    <Grid.Column width={3}>
-      <Product>
-        <Product.Media />
-        <Product.Meta>
-          <Like count={50} />
-          <span>
-            $129.99
-          </span>
-        </Product.Meta>
-      </Product>
-    </Grid.Column>
-    <Grid.Column width={3}>
-      <Product>
-        <Product.Media />
-        <Product.Meta>
-          <Like count={50} />
-          <span>
-            $129.99
-          </span>
-        </Product.Meta>
-      </Product>
-    </Grid.Column>
+    <Grid.Row>
+      <Grid.Column width={3}>
+        <Product>
+          <Product.Media />
+          <Product.Meta>
+            <Like count={50} />
+            <span>
+              $129.99
+            </span>
+          </Product.Meta>
+        </Product>
+      </Grid.Column>
+      <Grid.Column width={3}>
+        <Product>
+          <Product.Media />
+          <Product.Meta>
+            <Like count={50} />
+            <span>
+              $129.99
+            </span>
+          </Product.Meta>
+        </Product>
+      </Grid.Column>
+      <Grid.Column width={3}>
+        <Product>
+          <Product.Media />
+          <Product.Meta>
+            <Like count={50} />
+            <span>
+              $129.99
+            </span>
+          </Product.Meta>
+        </Product>
+      </Grid.Column>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Column width={3}>
+        <Product>
+          <Product.Media />
+          <Product.Meta>
+            <Like count={50} />
+            <span>
+              $129.99
+            </span>
+          </Product.Meta>
+        </Product>
+      </Grid.Column>
+      <Grid.Column width={3}>
+        <Product>
+          <Product.Media />
+          <Product.Meta>
+            <Like count={50} />
+            <span>
+              $129.99
+            </span>
+          </Product.Meta>
+        </Product>
+      </Grid.Column>
+      <Grid.Column width={3}>
+        <Product>
+          <Product.Media />
+          <Product.Meta>
+            <Like count={50} />
+            <span>
+              $129.99
+            </span>
+          </Product.Meta>
+        </Product>
+      </Grid.Column>
+    </Grid.Row>
+    <Grid.Row>
+      <Grid.Column width={3}>
+        <Product>
+          <Product.Media />
+          <Product.Meta>
+            <Like count={50} />
+            <span>
+              $129.99
+            </span>
+          </Product.Meta>
+        </Product>
+      </Grid.Column>
+      <Grid.Column width={3}>
+        <Product>
+          <Product.Media />
+          <Product.Meta>
+            <Like count={50} />
+            <span>
+              $129.99
+            </span>
+          </Product.Meta>
+        </Product>
+      </Grid.Column>
+      <Grid.Column width={3}>
+        <Product>
+          <Product.Media />
+          <Product.Meta>
+            <Like count={50} />
+            <span>
+              $129.99
+            </span>
+          </Product.Meta>
+        </Product>
+      </Grid.Column>
+    </Grid.Row>
   </Grid>
 );
 
