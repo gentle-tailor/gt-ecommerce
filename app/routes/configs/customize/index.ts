@@ -1,6 +1,7 @@
 import * as PATHS from 'routes/paths';
 import { RouteConfig } from 'types/routes';
 import Root from 'containers/Routes/Customize/Root';
+import Accents from 'containers/Routes/Customize/Accents';
 import Fabric from 'containers/Routes/Customize/Fabric';
 import Styles from 'containers/Routes/Customize/Styles';
 import ProtectedRoute from 'components/Shared/Routes/ProtectedRoute';
@@ -31,7 +32,7 @@ const routeConfigs: RouteConfig[] = [
   {
     props: {
       path: PATHS.PATH_CUSTOMIZE_ACCENT,
-      component: () => null,
+      component: Accents,
     },
     component: ProtectedRoute,
   },

@@ -12,10 +12,10 @@ const Header: React.SFC = () => (
         FABRIC
       </NavLink>
       <NavLink to={PATHS.PATH_CUSTOMIZE_STYLE}>
-        STYLE
+        STYLES
       </NavLink>
       <NavLink to={PATHS.PATH_CUSTOMIZE_ACCENT}>
-        ACCENT
+        ACCENTS
       </NavLink>
       <NavLink to={PATHS.PATH_CUSTOMIZE_CONFIRM}>
         CONFIRM
