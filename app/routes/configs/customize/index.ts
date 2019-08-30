@@ -1,5 +1,6 @@
 import * as PATHS from 'routes/paths';
 import { RouteConfig } from 'types/routes';
+import jacketRouteConfigs from './jacket';
 import Root from 'containers/Routes/Customize/Root';
 import Jacket from 'containers/Routes/Customize/Jacket';
 import PathLogger from 'components/Shared/Routes/PathLogger';
@@ -18,6 +19,7 @@ const routeConfigs: RouteConfig[] = [
     props: {
       path: PATHS.PATH_CUSTOMIZE_JACKET,
       component: Jacket,
+      routeConfigs: jacketRouteConfigs,
     },
     component: ProtectedRoute,
   },

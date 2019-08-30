@@ -4,10 +4,10 @@ import LinkContainer from 'components/Shared/LinkContainer';
 import Selection from 'components/Shared/Selection';
 import SelectionInfo from 'components/Shared/SelectionInfo';
 import HeadingAuto from 'components/Shared/HeadingAuto';
-import Container from './Container';
+import List from 'components/Customize/Shared/List';
 
 const Selections: React.SFC = () => (
-  <Container>
+  <List>
     <Selection>
       <Selection.Media />
       <Selection.Meta>
@@ -74,7 +74,7 @@ const Selections: React.SFC = () => (
         </LinkContainer>
       </Selection.Meta>
     </Selection>
-  </Container>
+  </List>
 );
 
 export default Selections;
