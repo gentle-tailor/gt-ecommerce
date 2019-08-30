@@ -1,14 +1,13 @@
 import * as PATHS from 'routes/paths';
 import { RouteConfig } from 'types/routes';
-import Root from 'containers/Routes/Customize/Root';
-import Jacket from 'containers/Routes/Customize/Jacket';
+import Root from 'containers/Routes/Customize/Jacket/Root';
 import PathLogger from 'components/Shared/Routes/PathLogger';
 import ProtectedRoute from 'components/Shared/Routes/ProtectedRoute';
 
 const routeConfigs: RouteConfig[] = [
   {
     props: {
-      path: PATHS.PATH_CUSTOMIZE,
+      path: PATHS.PATH_CUSTOMIZE_JACKET,
       exact: true,
       component: Root,
     },
@@ -16,29 +15,22 @@ const routeConfigs: RouteConfig[] = [
   },
   {
     props: {
-      path: PATHS.PATH_CUSTOMIZE_JACKET,
-      component: Jacket,
-    },
-    component: ProtectedRoute,
-  },
-  {
-    props: {
-      path: PATHS.PATH_CUSTOMIZE_PANTS,
+      path: PATHS.PATH_CUSTOMIZE_JACKET_FABRIC,
       component: PathLogger,
     },
     component: ProtectedRoute,
   },
   {
     props: {
-      path: PATHS.PATH_CUSTOMIZE_VEST,
+      path: PATHS.PATH_CUSTOMIZE_JACKET_STYLES,
       component: PathLogger,
     },
     component: ProtectedRoute,
   },
   {
     props: {
-      path: PATHS.PATH_CUSTOMIZE_MEASUREMENT,
-      component: () => null,
+      path: PATHS.PATH_CUSTOMIZE_JACKET_ACCENTS,
+      component: PathLogger,
     },
     component: ProtectedRoute,
   },
