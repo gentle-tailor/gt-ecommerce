@@ -1,27 +1,16 @@
-import React from 'react';
-import { css } from 'emotion';
-import * as PATHS from 'routes/paths';
-import Container from './Container';
-import StepSequence from 'components/Shared/StepSequence';
-import NavLink from 'components/Shared/NavLink';
+import styled from '@emotion/styled';
 
-const Header: React.SFC = () => (
-  <Container>
-    <StepSequence className={css`font-size: 8.5px;`}>
-      <NavLink to={PATHS.PATH_CUSTOMIZE_FABRIC}>
-        FABRIC
-      </NavLink>
-      <NavLink to={PATHS.PATH_CUSTOMIZE_STYLE}>
-        STYLES
-      </NavLink>
-      <NavLink to={PATHS.PATH_CUSTOMIZE_ACCENT}>
-        ACCENTS
-      </NavLink>
-      <NavLink to={PATHS.PATH_CUSTOMIZE_CONFIRM}>
-        CONFIRM
-      </NavLink>
-    </StepSequence>
-  </Container>
-);
+type HeaderProps = {
+  children: React.ReactNode;
+};
+
+const Header = styled('div')<HeaderProps>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+  margin-bottom: 40px;
+  width: 100%;
+`;
 
 export default Header;

@@ -6,14 +6,13 @@ type ContainerProps = {
 
 const Container = styled('div')<ContainerProps>`
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 100%;
 
   & > :not(:last-child) {
-    margin-right: 3rem;
+    margin-bottom: 2em;
   }
 `;
 

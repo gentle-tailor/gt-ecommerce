@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { cx, css } from 'emotion';
-import { CountContext, CountContextRenderProps } from 'containers/Misc/Contexts/Count';
+import Count, { CountContextRenderProps } from 'containers/Misc/Contexts/Count';
 
 type ColumnProps = {
   children: React.ReactNode;
@@ -13,8 +13,7 @@ const Column: React.SFC<ColumnProps> = ({
   width,
   className
 }) => {
-  const { count } = useContext<CountContextRenderProps>(CountContext);
-  console.log(count, 'huh');
+  const { count } = useContext<CountContextRenderProps>(Count);
 
   return (
     <div

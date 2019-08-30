@@ -1,20 +1,24 @@
 import React from 'react';
-import Container from './Parts/Container';
-import Content from './Parts/Content';
+import Heading from 'components/Shared/Heading';
 import Header from './Parts/Header';
+import Container from './Parts/Container';
+import Section from './Parts/Section';
+import Selections from './Parts/Selections';
+import FooterNav from './Parts/FooterNav';
 
-type CustomizeProps = {
-  children: React.ReactNode;
-};
-
-const Customize: React.SFC<CustomizeProps> = ({
-  children
-}) => (
+const Customize: React.SFC = () => (
   <Container>
-    <Header />
-    <Content>
-      {children}
-    </Content>
+    <Header>
+      <Heading level={2}>
+        CUSTOMIZE SUIT
+      </Heading>
+    </Header>
+    <Section>
+      <Selections />
+    </Section>
+    <Section>
+      <FooterNav />
+    </Section>
   </Container>
 );
 

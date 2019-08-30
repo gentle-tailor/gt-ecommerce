@@ -1,8 +1,8 @@
 import React from 'react';
 import * as R from 'ramda';
 import { cx, css } from 'emotion';
-import { CountContext } from 'containers/Misc/Contexts/Count';
 import { isColumn } from '../Column';
+import Count  from 'containers/Misc/Contexts/Count';
 
 type RowProps = {
   children: React.ReactNode;
@@ -29,9 +29,9 @@ const Row: React.SFC<RowProps> = ({
       width: 100%;
     `)}
   >
-    <CountContext.Provider value={{ count: count(React.Children.toArray(children)) }}>
+    <Count.Provider value={{ count: count(React.Children.toArray(children)) }}>
       {children}
-    </CountContext.Provider>
+    </Count.Provider>
   </div>
 );
 

@@ -1,10 +1,9 @@
 import React from 'react';
-import { Redirect } from 'react-router';
 import { RouteComponentProps } from 'types/routes';
-import { PATH_CUSTOMIZE_FABRIC } from 'routes/paths';
+import CustomizeComponent from 'components/Customize';
 
 const Root: React.SFC<RouteComponentProps> = () => (
-  <Redirect to={PATH_CUSTOMIZE_FABRIC} />
+  <CustomizeComponent />
 );
 
 export default Root;

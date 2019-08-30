@@ -6,7 +6,7 @@ type PriceProps = {
 };
 
 const Price = styled('div')<PriceProps>`
-  grid-column: 2;
+  grid-column: 3;
   align-self: center;
   text-align: right;
 `;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { LevelConsumer, LevelProvider } from 'containers/Misc/Contexts/Level';
+import Level from 'containers/Misc/Contexts/Level';
 
 type SectionProps = {
   children: React.ReactNode;
@@ -10,15 +10,15 @@ const Section: React.SFC<SectionProps> = ({
   children,
   className,
 }) => (
-  <LevelConsumer>
+  <Level.Consumer>
     {({ level }) => (
-      <LevelProvider value={{ level: level + 1 }}>
+      <Level.Provider value={{ level: level + 1 }}>
         <section className={className}>
           {children}
         </section>
-      </LevelProvider>
+      </Level.Provider>
     )}
-  </LevelConsumer>
+  </Level.Consumer>
 );
 
 export default Section;

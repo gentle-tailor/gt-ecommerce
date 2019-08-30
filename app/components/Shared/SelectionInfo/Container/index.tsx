@@ -7,7 +7,7 @@ type ContainerProps = {
 
 const Container = styled('div')<ContainerProps>`
   display: grid;
-  grid-template-columns: 2fr 5fr auto;
+  grid-template-columns: 2fr 5fr minmax(auto, 1fr);
   width: 100%;
 `;
 

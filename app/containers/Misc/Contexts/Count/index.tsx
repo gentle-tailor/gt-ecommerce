@@ -1,4 +1,4 @@
-import React from 'react';
+import { createContext } from 'react';
 
 export type CountContextProviderProps = {
   children: React.ReactNode;
@@ -8,10 +8,6 @@ export type CountContextRenderProps = {
   count: number;
 };
 
-const CountContext= React.createContext<CountContextRenderProps>({
+export default createContext<CountContextRenderProps>({
   count: 0,
-});
-
-export {
-  CountContext,
-};
+})

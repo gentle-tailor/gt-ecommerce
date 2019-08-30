@@ -1,6 +1,6 @@
 import React from 'react';
 import { Omit } from 'types/utility';
-import { LevelConsumer } from 'containers/Misc/Contexts/Level';
+import Level from 'containers/Misc/Contexts/Level';
 import Heading, { HeadingProps } from 'components/Shared/Heading';
 
 export type HeadingAutoProps = (
@@ -8,14 +8,14 @@ export type HeadingAutoProps = (
 );
 
 const HeadingAuto: React.SFC<HeadingAutoProps> = props => (
-  <LevelConsumer>
+  <Level.Consumer>
     {({ level }) => (
       <Heading
         {...props}
         level={level}
       />
     )}
-  </LevelConsumer>
+  </Level.Consumer>
 );
 
 export default HeadingAuto;
