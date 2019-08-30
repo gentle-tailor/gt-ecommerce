@@ -1,6 +1,7 @@
 import * as PATHS from 'routes/paths';
 import { RouteConfig } from 'types/routes';
 import Root from 'containers/Routes/Customize/Jacket/Root';
+import Accents from 'containers/Routes/Customize/Jacket/Accents';
 import Fabric from 'containers/Routes/Customize/Jacket/Fabric';
 import PathLogger from 'components/Shared/Routes/PathLogger';
 import ProtectedRoute from 'components/Shared/Routes/ProtectedRoute';
@@ -31,7 +32,7 @@ const routeConfigs: RouteConfig[] = [
   {
     props: {
       path: PATHS.PATH_CUSTOMIZE_JACKET_ACCENTS,
-      component: PathLogger,
+      component: Accents,
     },
     component: ProtectedRoute,
   },
