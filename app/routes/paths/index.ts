@@ -15,6 +15,8 @@ export const PATH_CUSTOMIZE_JACKET_FABRIC = join(PATH_CUSTOMIZE_JACKET, '/fabric
 export const PATH_CUSTOMIZE_JACKET_STYLES = join(PATH_CUSTOMIZE_JACKET, '/styles');
 export const PATH_CUSTOMIZE_JACKET_ACCENTS = join(PATH_CUSTOMIZE_JACKET, '/accents');
 export const PATH_CUSTOMIZE_PANTS = join(PATH_CUSTOMIZE, '/pants');
+export const PATH_CUSTOMIZE_PANTS_FABRIC = join(PATH_CUSTOMIZE_PANTS, '/fabric');
+export const PATH_CUSTOMIZE_PANTS_STYLES = join(PATH_CUSTOMIZE_PANTS, '/styles');
 export const PATH_CUSTOMIZE_VEST = join(PATH_CUSTOMIZE, '/vest');
 export const PATH_CUSTOMIZE_MEASUREMENT = join(PATH_CUSTOMIZE, '/measurement');
 
