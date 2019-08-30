@@ -1,9 +1,18 @@
 import React from 'react';
+import Section from 'components/Customize/Shared/Section';
+import Container from './Parts/Container';
+import FooterNav from './Parts/FooterNav';
+import Selections from './Parts/Selections';
 
 const Fabric: React.SFC = () => (
-  <div>
-    fabric
-  </div>
+  <Container>
+    <Section>
+      <Selections />
+    </Section>
+    <Section>
+      <FooterNav />
+    </Section>
+  </Container>
 );
 
 export default Fabric;
