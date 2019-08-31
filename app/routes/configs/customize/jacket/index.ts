@@ -1,0 +1,41 @@
+import * as PATHS from 'routes/paths';
+import { RouteConfig } from 'types/routes';
+import Root from 'containers/Routes/Customize/Jacket/Root';
+import Accents from 'containers/Routes/Customize/Jacket/Accents';
+import Fabric from 'containers/Routes/Customize/Jacket/Fabric';
+import Styles from 'containers/Routes/Customize/Jacket/Styles';
+import ProtectedRoute from 'components/Shared/Routes/ProtectedRoute';
+
+const routeConfigs: RouteConfig[] = [
+  {
+    props: {
+      path: PATHS.PATH_CUSTOMIZE_JACKET,
+      exact: true,
+      component: Root,
+    },
+    component: ProtectedRoute,
+  },
+  {
+    props: {
+      path: PATHS.PATH_CUSTOMIZE_JACKET_FABRIC,
+      component: Fabric,
+    },
+    component: ProtectedRoute,
+  },
+  {
+    props: {
+      path: PATHS.PATH_CUSTOMIZE_JACKET_STYLES,
+      component: Styles,
+    },
+    component: ProtectedRoute,
+  },
+  {
+    props: {
+      path: PATHS.PATH_CUSTOMIZE_JACKET_ACCENTS,
+      component: Accents,
+    },
+    component: ProtectedRoute,
+  },
+];
+
+export default routeConfigs;

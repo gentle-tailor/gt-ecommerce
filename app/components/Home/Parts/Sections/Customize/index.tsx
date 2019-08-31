@@ -1,4 +1,6 @@
 import React from 'react';
+import { PATH_CUSTOMIZE } from 'routes/paths';
+import Link from 'components/Shared/Link';
 import Description from 'components/Shared/Callouts/Description';
 import Primary from 'components/Shared/Callouts/Primary';
 import Heading from 'components/Shared/Heading';
@@ -12,7 +14,9 @@ const CUSTOMIZE: React.SFC = () => (
             CUSTOMIZE
           </Heading>
           <p>
-            DESIGN YOUR OWN
+            <Link to={PATH_CUSTOMIZE}>
+              DESIGN YOUR OWN
+            </Link>
           </p>
         </Description>
       </Primary.Meta>

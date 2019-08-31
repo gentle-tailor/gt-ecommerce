@@ -25,7 +25,7 @@ const Bullet = styled('span')<BulletProps>`
       ? '1'
       : '0.4'
   )};
-  transition: all 0.5s ;
+  transition: all 0.3s ;
 `;
 
 export default Bullet;

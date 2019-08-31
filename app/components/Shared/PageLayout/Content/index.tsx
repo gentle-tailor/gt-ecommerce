@@ -5,7 +5,8 @@ type ContentProps = {
 };
 
 const Content = styled('div')<ContentProps>`
-  margin-top: 60px;
+  margin-top: 100px;
+  padding: 0 16px;
 `
 
 export default Content;

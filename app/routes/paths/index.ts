@@ -10,10 +10,15 @@ export const PATH_AUTH_SIGNUP = join(PATH_AUTH, '/signup');
 export const PATH_AUTH_PASSWORD = join(PATH_AUTH, '/password');
 
 export const PATH_CUSTOMIZE = join(PATH_ROOT, '/customize');
-export const PATH_CUSTOMIZE_FABRIC = join(PATH_CUSTOMIZE, '/fabric');
-export const PATH_CUSTOMIZE_STYLE = join(PATH_CUSTOMIZE, '/style');
-export const PATH_CUSTOMIZE_ACCENT = join(PATH_CUSTOMIZE, '/accent');
-export const PATH_CUSTOMIZE_CONFIRM = join(PATH_CUSTOMIZE, '/confirm');
+export const PATH_CUSTOMIZE_JACKET = join(PATH_CUSTOMIZE, '/jacket');
+export const PATH_CUSTOMIZE_JACKET_FABRIC = join(PATH_CUSTOMIZE_JACKET, '/fabric');
+export const PATH_CUSTOMIZE_JACKET_STYLES = join(PATH_CUSTOMIZE_JACKET, '/styles');
+export const PATH_CUSTOMIZE_JACKET_ACCENTS = join(PATH_CUSTOMIZE_JACKET, '/accents');
+export const PATH_CUSTOMIZE_PANTS = join(PATH_CUSTOMIZE, '/pants');
+export const PATH_CUSTOMIZE_PANTS_FABRIC = join(PATH_CUSTOMIZE_PANTS, '/fabric');
+export const PATH_CUSTOMIZE_PANTS_STYLES = join(PATH_CUSTOMIZE_PANTS, '/styles');
+export const PATH_CUSTOMIZE_VEST = join(PATH_CUSTOMIZE, '/vest');
+export const PATH_CUSTOMIZE_VEST_STYLES = join(PATH_CUSTOMIZE_VEST, '/styles');
 export const PATH_CUSTOMIZE_MEASUREMENT = join(PATH_CUSTOMIZE, '/measurement');
 
 export const PATH_EDITORIALS = join(PATH_ROOT, '/editorials');
