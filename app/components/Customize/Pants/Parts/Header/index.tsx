@@ -6,10 +6,15 @@ type HeaderProps = {
 
 const Header = styled('div')<HeaderProps>`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 48px;
   width: 100%;
-  height: 60px;
+
+  & > :not(:last-child) {
+    margin-bottom: 40px;
+  }
 `;
 
 export default Header;

@@ -5,29 +5,31 @@ type Breakpoint = {
   maxWidth: number;
 };
 
-const mobile: Breakpoint = {
-  minWidth: 0,
-  maxWidth: 480,
-};
+const breakpoints: Record<Viewport, Breakpoint> = {
+  get mobile() {
+    return {
+      minWidth: 0,
+      maxWidth: 480,
+    }
+  },
+  get tabletPortrait() {
+    return {
+      minWidth: breakpoints.mobile.maxWidth + 1,
+      maxWidth: 767,
+    }
+  },
+  get tabletLandscape() {
+    return {
+      minWidth: breakpoints.tabletPortrait.maxWidth + 1,
+      maxWidth: 1024,
+    }
+  },
+  get desktop() {
+    return {
+      minWidth: breakpoints.tabletLandscape.maxWidth,
+      maxWidth: 2048,
+    }
+  }
+}
 
-const tabletPortrait: Breakpoint = {
-  minWidth: mobile.maxWidth + 1,
-  maxWidth: 767,
-};
-
-const tabletLandscape: Breakpoint = {
-  minWidth: tabletPortrait.maxWidth + 1,
-  maxWidth: 1024,
-};
-
-const desktop: Breakpoint = {
-  minWidth: tabletLandscape.maxWidth,
-  maxWidth: 2048,
-};
-
-export default {
-  mobile,
-  tabletPortrait,
-  tabletLandscape,
-  desktop
-} as Record<Viewport, Breakpoint>;
+export default breakpoints;

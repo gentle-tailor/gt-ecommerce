@@ -2,10 +2,11 @@ import * as PATHS from 'routes/paths';
 import { RouteConfig } from 'types/routes';
 import jacketRouteConfigs from './jacket';
 import pantsRouteConfigs from './pants';
+import vestRouteConfigs from './vest';
 import Root from 'containers/Routes/Customize/Root';
 import Jacket from 'containers/Routes/Customize/Jacket';
 import Pants from 'containers/Routes/Customize/Pants';
-import PathLogger from 'components/Shared/Routes/PathLogger';
+import Vest from 'containers/Routes/Customize/Vest';
 import ProtectedRoute from 'components/Shared/Routes/ProtectedRoute';
 
 const routeConfigs: RouteConfig[] = [
@@ -36,7 +37,8 @@ const routeConfigs: RouteConfig[] = [
   {
     props: {
       path: PATHS.PATH_CUSTOMIZE_VEST,
-      component: PathLogger,
+      component: Vest,
+      routeConfigs: vestRouteConfigs,
     },
     component: ProtectedRoute,
   },

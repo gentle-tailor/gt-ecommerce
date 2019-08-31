@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Heading from 'components/Shared/Heading';
 import Header from 'components/Customize/Shared/Header';
@@ -5,17 +6,17 @@ import Container from './Parts/Container';
 import Content from './Parts/Content';
 import PathSequence from './Parts/PathSequence';
 
-type JacketProps = {
+type VestProps = {
   children: React.ReactNode;
 };
 
-const Jacket: React.SFC<JacketProps> = ({
+const Vest: React.SFC<VestProps> = ({
   children
 }) => (
   <Container>
     <Header>
       <Heading level={2}>
-        JACKET
+        VEST
       </Heading>
       <PathSequence />
     </Header>
@@ -25,4 +26,4 @@ const Jacket: React.SFC<JacketProps> = ({
   </Container>
 );
 
-export default Jacket;
+export default Vest;
