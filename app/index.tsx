@@ -2,15 +2,23 @@ import 'sanitize.css';
 import './styles/global';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { Router } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import ScrollRecorder from 'components/Shared/Scroll/ScrollRecorder';
+import ScrollRestorer from 'components/Shared/Scroll/ScrollRestorer';
 import App from './containers/App';
+
+const history = createBrowserHistory();
 
 const render = (Component: React.ComponentType<any>) => (
   ReactDOM.render(
     (
-      <BrowserRouter>
-        <Component />
-      </BrowserRouter>
+      <Router history={history}>
+        <ScrollRecorder history={history}>
+          <Component />
+          <ScrollRestorer/>
+        </ScrollRecorder>
+      </Router>
     ),
     document.getElementById('root')
   )
