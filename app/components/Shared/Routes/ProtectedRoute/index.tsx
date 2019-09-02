@@ -16,7 +16,7 @@ const ProtectedRoute = React.memo<ProtectedRouteProps>(
   ),
   R.useWith(R.equals, [
     R.prop('location'),
-    R.prop('location')
+    R.prop('location'),
   ])
 );
 

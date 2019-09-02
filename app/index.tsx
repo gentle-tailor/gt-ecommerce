@@ -7,12 +7,14 @@ import App from './containers/App';
 
 const render = (Component: React.ComponentType<any>) => (
   ReactDOM.render(
-    <BrowserRouter>
-      <Component />
-    </BrowserRouter>,
+    (
+      <BrowserRouter>
+        <Component />
+      </BrowserRouter>
+    ),
     document.getElementById('root')
   )
-)
+);
 
 render(App);
 

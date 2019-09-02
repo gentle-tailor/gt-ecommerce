@@ -4,7 +4,7 @@ type SliderProps = {
   children: React.ReactNode;
   panelCount: number;
   activeIndex: number;
-}
+};
 
 const Slider = styled('div')<SliderProps>`
   display: flex;
@@ -19,7 +19,7 @@ const Slider = styled('div')<SliderProps>`
   transition-timing-function: cubic-bezier(.99,.08,.39,.98);
 
   & > * {
-    width: ${({ panelCount }) => 100 /(panelCount || 1)}% !important;
+    width: ${({ panelCount }) => 100 / (panelCount || 1)}% !important;
   }
 `;
 

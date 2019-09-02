@@ -4,7 +4,7 @@ import { RouteConfig } from 'types/routes';
 
 export type RenderRouteConfigProps = (
   RouteConfig
-)
+);
 
 const RenderRouteConfig: React.SFC<RenderRouteConfigProps> = ({
   component: Route,
@@ -12,14 +12,14 @@ const RenderRouteConfig: React.SFC<RenderRouteConfigProps> = ({
     component: Component,
     routeConfigs,
     ...routeProps
-  }
+  },
 }: RenderRouteConfigProps) => {
   const renderComponent = (componentProps: RouteComponentProps) => (
     <Component
       {...componentProps}
       routeConfigs={routeConfigs}
     />
-  )
+  );
 
   return (
     <Route

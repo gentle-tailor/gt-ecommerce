@@ -6,6 +6,6 @@ const Container = styled('div')`
   justify-content: center;
   padding: 10px 82px;
   height: 90px;
-`
+`;
 
 export default Container;

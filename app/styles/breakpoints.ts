@@ -10,26 +10,26 @@ const breakpoints: Record<Viewport, Breakpoint> = {
     return {
       minWidth: 0,
       maxWidth: 480,
-    }
+    };
   },
   get tabletPortrait() {
     return {
       minWidth: breakpoints.mobile.maxWidth + 1,
       maxWidth: 767,
-    }
+    };
   },
   get tabletLandscape() {
     return {
       minWidth: breakpoints.tabletPortrait.maxWidth + 1,
       maxWidth: 1024,
-    }
+    };
   },
   get desktop() {
     return {
       minWidth: breakpoints.tabletLandscape.maxWidth,
       maxWidth: 2048,
-    }
-  }
-}
+    };
+  },
+};
 
 export default breakpoints;

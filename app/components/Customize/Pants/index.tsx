@@ -11,7 +11,7 @@ type PantsProps = {
 };
 
 const Pants: React.SFC<PantsProps> = ({
-  children
+  children,
 }) => (
   <Container>
     <Header>

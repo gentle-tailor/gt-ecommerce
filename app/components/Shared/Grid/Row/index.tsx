@@ -2,7 +2,7 @@ import React from 'react';
 import * as R from 'ramda';
 import { cx, css } from 'emotion';
 import { isColumn } from '../Column';
-import Count  from 'containers/Misc/Contexts/Count';
+import Count from 'containers/Misc/Contexts/Count';
 
 type RowProps = {
   children: React.ReactNode;
@@ -20,7 +20,7 @@ const count = R.reduceRight<React.ReactNode, number>(
 
 const Row: React.SFC<RowProps> = ({
   children,
-  className
+  className,
 }) => (
   <div
     className={cx(className, css`

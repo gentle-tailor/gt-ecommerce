@@ -10,7 +10,7 @@ type JacketProps = {
 };
 
 const Jacket: React.SFC<JacketProps> = ({
-  children
+  children,
 }) => (
   <Container>
     <Header>

@@ -11,7 +11,7 @@ const Customize: React.SFC<CustomizeProps> = ({
   routeConfigs = [],
   ...rest
 }) => (
-  <Switch>  
+  <Switch>
     <RenderRouteConfigs routeConfigs={routeConfigs} />
   </Switch>
 );

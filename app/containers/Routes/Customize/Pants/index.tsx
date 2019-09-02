@@ -13,7 +13,7 @@ const Pants: React.SFC<PantsProps> = ({
   ...rest
 }) => (
   <PantsComponent>
-    <Switch>  
+    <Switch>
       <RenderRouteConfigs routeConfigs={routeConfigs} />
     </Switch>
   </PantsComponent>

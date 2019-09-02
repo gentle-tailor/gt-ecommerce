@@ -7,6 +7,6 @@ type ColumnProps = {
 
 const Column = styled('div')<ColumnProps>`
   flex-basis: 21.5rem;
-`
+`;
 
 export default Column;

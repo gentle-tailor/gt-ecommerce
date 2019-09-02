@@ -9,18 +9,18 @@ type HookPayload = [
 type Range = {
   min: number;
   max: number;
-}
+};
 
 const normalize = (
   {
     min,
-    max
+    max,
   }: Range
 ): (i: number) => number => (
   R.cond([
     [R.lt(max), R.always(min)],
     [R.gt(min), R.always(max)],
-    [R.T, R.identity]
+    [R.T, R.identity],
   ])
 );
 
@@ -38,7 +38,7 @@ const useSlide = (
   return [
     index,
     R.compose(setIndex, normalize(range)),
-  ]
+  ];
 };
 
 export default useSlide;

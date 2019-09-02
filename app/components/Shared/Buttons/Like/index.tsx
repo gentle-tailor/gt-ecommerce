@@ -4,7 +4,7 @@ import Button from './Button';
 
 type LikeProps = {
   count: number;
-  status?: 'like' | 'unlike'
+  status?: 'like' | 'unlike';
   onClick?: () => void;
 };
 

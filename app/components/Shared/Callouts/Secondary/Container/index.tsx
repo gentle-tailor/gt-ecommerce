@@ -11,6 +11,6 @@ const Container = styled('div')<ContainerProps>`
   position: relative;
   width: 530px;
   height: 570px;
-`
+`;
 
 export default Container;

@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 type GradientBoxProps = {
   className?: string;
-}
+};
 
 const GradientBox = styled('div')<GradientBoxProps>`
   background: rgb(251,251,251);

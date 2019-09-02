@@ -11,6 +11,6 @@ const Container = styled('div')<ContainerProps>`
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2.2rem;
   justify-items: center;
-`
+`;
 
 export default Container;

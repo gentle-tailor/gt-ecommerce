@@ -4,7 +4,7 @@ import NavLink from 'components/Shared/NavLink';
 import Container from 'components/Shared/Header';
 import Shell from 'components/Shared/Shell';
 
-const Header: React.SFC= () => (
+const Header: React.SFC = () => (
   <Container>
     <Shell>
       <Shell.Block>

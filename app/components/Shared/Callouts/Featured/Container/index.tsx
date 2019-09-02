@@ -10,6 +10,6 @@ const Container = styled('div')<ContainerProps>`
   align-items: center;
   position: relative;
   height: 500px;
-`
+`;
 
 export default Container;

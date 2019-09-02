@@ -7,7 +7,7 @@ type IndicatorProps = {
 };
 
 const Indicator: React.SFC<IndicatorProps> = ({
-  children
+  children,
 }) => {
   const { hovered } = useContext(Hover);
 
@@ -15,7 +15,7 @@ const Indicator: React.SFC<IndicatorProps> = ({
     <ActiveIndicator active={hovered}>
       {children}
     </ActiveIndicator>
-  )
+  );
 };
 
 export default Indicator;

@@ -6,6 +6,6 @@ export default Object.assign(
   Container,
   {
     Primary,
-    Secondary
+    Secondary,
   }
 );

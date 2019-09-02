@@ -11,7 +11,7 @@ type VestProps = {
 };
 
 const Vest: React.SFC<VestProps> = ({
-  children
+  children,
 }) => (
   <Container>
     <Header>

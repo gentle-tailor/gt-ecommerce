@@ -13,7 +13,7 @@ const Jacket: React.SFC<JacketProps> = ({
   ...rest
 }) => (
   <JacketComponent>
-    <Switch>  
+    <Switch>
       <RenderRouteConfigs routeConfigs={routeConfigs} />
     </Switch>
   </JacketComponent>

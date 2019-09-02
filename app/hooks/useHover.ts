@@ -24,9 +24,9 @@ const useHover = (): HookPayload => {
       onHoverOut: useCallback(
         () => setHovered(false),
         [hovered]
-      )
-    }
-  ]
+      ),
+    },
+  ];
 };
 
 export default useHover;

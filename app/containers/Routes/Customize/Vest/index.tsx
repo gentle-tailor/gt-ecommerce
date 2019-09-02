@@ -13,7 +13,7 @@ const Vest: React.SFC<VestProps> = ({
   ...rest
 }) => (
   <VestComponent>
-    <Switch>  
+    <Switch>
       <RenderRouteConfigs routeConfigs={routeConfigs} />
     </Switch>
   </VestComponent>

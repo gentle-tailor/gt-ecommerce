@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export type BulletProps = {
   active?: boolean;
   onClick: () => void;
-}
+};
 
 const Bullet = styled('span')<BulletProps>`
   cursor: pointer;

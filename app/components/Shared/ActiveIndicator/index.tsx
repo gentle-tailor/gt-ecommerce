@@ -4,12 +4,12 @@ import Indicator from './Indicator';
 
 type ActiveIndicatorProps = {
   children: React.ReactNode;
-  active: boolean; 
+  active: boolean;
 };
 
 const ActiveIndicator: React.SFC<ActiveIndicatorProps> = ({
   children,
-  active
+  active,
 }) => (
   <Container>
     {children}
