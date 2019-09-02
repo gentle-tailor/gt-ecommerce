@@ -11,7 +11,7 @@ type ColumnProps = {
 const Column: React.SFC<ColumnProps> = ({
   children,
   width,
-  className
+  className,
 }) => {
   const { count } = useContext<CountContextRenderProps>(Count);
 
@@ -27,13 +27,12 @@ const Column: React.SFC<ColumnProps> = ({
       {children}
     </div>
   );
-}
+};
 
 export const isColumn = (
   child: React.ReactChild | React.ReactNode
 ): child is React.ReactElement<ColumnProps> => (
   React.isValidElement(child) && child.type === Column
 );
-
 
 export default Column;

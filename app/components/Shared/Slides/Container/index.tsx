@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 type ContainerProps = {
   children: React.ReactNode;
-}
+};
 
 const Container = styled('div')<ContainerProps>`
   display: flex;

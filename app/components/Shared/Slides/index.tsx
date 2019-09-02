@@ -11,7 +11,7 @@ type SlidesProps = {
 };
 
 const Slides: React.SFC<SlidesProps> = ({
-  children
+  children,
 }) => {
   const count = React.Children.count(children);
   const [curr, setIndex] = useSlide({ min: 0, max: count });
@@ -35,6 +35,6 @@ const Slides: React.SFC<SlidesProps> = ({
       </BulletGroup>
     </Container>
   );
-}
+};
 
 export default Slides;

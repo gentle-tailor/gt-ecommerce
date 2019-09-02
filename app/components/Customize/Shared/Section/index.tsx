@@ -10,8 +10,8 @@ type SectionProps = {
 const alignment = R.cond([
   [R.equals('left'), R.always('flex-start')],
   [R.equals('right'), R.always('flex-end')],
-  [R.T, R.always('center')]
-])
+  [R.T, R.always('center')],
+]);
 
 const Section = styled(Inner)<SectionProps>`
   display: flex;

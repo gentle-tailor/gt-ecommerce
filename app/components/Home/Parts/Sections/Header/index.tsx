@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 type HeaderProps = {
   align?: 'left' | 'right' | 'center';
-}
+};
 
 const Header = styled('div')<HeaderProps>`
   text-align: ${props => props.align || 'center'};

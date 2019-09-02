@@ -6,6 +6,6 @@ export default Object.assign(
   Container,
   {
     Next,
-    Prev
+    Prev,
   }
 );

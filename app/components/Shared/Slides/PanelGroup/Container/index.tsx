@@ -3,7 +3,7 @@ import GradientBorder from 'components/Shared/GradientBorder';
 
 type ContainerProps = {
   children: React.ReactNode;
-}
+};
 
 const Container = styled(GradientBorder)<ContainerProps>`
   width: 100%;

@@ -89,6 +89,6 @@ const routeConfigs: RouteConfig[] = [
     },
     component: ProtectedRoute,
   },
-]
+];
 
 export default routeConfigs;

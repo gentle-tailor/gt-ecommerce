@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 type CheckProps = {
   className?: string;
-}
+};
 
 const Check = styled('div')<CheckProps>`
   width: 34px;

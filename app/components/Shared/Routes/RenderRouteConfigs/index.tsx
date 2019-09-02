@@ -4,7 +4,7 @@ import RenderRouteConfig from 'components/Shared/Routes/RenderRouteConfig';
 
 type RenderRouteConfigsProps = {
   routeConfigs: RouteConfig[];
-}
+};
 
 const RenderRouteConfigs: React.SFC<RenderRouteConfigsProps> = ({
   routeConfigs = [],

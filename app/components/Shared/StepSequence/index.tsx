@@ -6,7 +6,7 @@ import Indicator from './Indicator';
 type StepSequenceProps = {
   children: React.ReactNode;
   className?: string;
-}
+};
 
 const StepSequence: React.SFC<StepSequenceProps> = ({
   children,

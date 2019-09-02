@@ -4,6 +4,6 @@ const Block = styled('div')`
   & > :not(:last-child) {
     margin-right: 4em;
   }
-`
+`;
 
 export default Block;

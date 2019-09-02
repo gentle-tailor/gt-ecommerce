@@ -7,7 +7,7 @@ export type LinkExternalProps = {
   href: string;
   target?: string;
   active?: boolean;
-}
+};
 
 const LinkExternal: React.SFC<LinkExternalProps> = ({
   children,
@@ -29,6 +29,6 @@ const LinkExternal: React.SFC<LinkExternalProps> = ({
       </a>
     </ActiveIndicator>
   );
-}
+};
 
 export default LinkExternal;

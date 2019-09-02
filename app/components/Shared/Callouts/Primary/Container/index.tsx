@@ -11,6 +11,6 @@ const Container = styled(GradientBox)<ContainerProps>`
   align-items: center;
   width: 100%;
   height: 500px;
-`
+`;
 
 export default Container;

@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 type FooterProps = {
   align?: 'left' | 'right' | 'center';
-}
+};
 
 const Footer = styled('div')<FooterProps>`
   text-align: ${props => props.align || 'center'};

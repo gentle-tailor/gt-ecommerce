@@ -2,6 +2,7 @@ import { injectGlobal } from 'emotion';
 import { viewportBelow } from 'utils/styles/mediaQuery';
 import { font } from './constants';
 
+// tslint:disable no-unused-expression
 injectGlobal`
   * {
     box-sizing: border-box;
@@ -9,7 +10,7 @@ injectGlobal`
 
   body {
     background-color: #fff;
-    font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     font-size: 10px;
     color: ${font.color.secondary};
@@ -29,4 +30,4 @@ injectGlobal`
   button:focus {
     outline: 0;
   }
-`
+`;

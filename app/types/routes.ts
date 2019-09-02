@@ -29,13 +29,13 @@ export type RouteProps = (
 
 export type RouteConfig = {
   filter?: RouteFilter;
-  component: React.ComponentType<RouteProps>
+  component: React.ComponentType<RouteProps>;
   props: {
     path: string;
     component: React.ComponentType<RouteComponentProps>;
     exact?: boolean;
     routeConfigs?: RouteConfig[];
-  }
+  };
 };
 
 export type RouteFilter<S = any> = (

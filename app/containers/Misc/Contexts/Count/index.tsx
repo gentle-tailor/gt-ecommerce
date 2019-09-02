@@ -2,7 +2,7 @@ import { createContext } from 'react';
 
 export type CountContextProviderProps = {
   children: React.ReactNode;
-}
+};
 
 export type CountContextRenderProps = {
   count: number;
@@ -10,4 +10,4 @@ export type CountContextRenderProps = {
 
 export default createContext<CountContextRenderProps>({
   count: 0,
-})
+});

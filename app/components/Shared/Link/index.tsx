@@ -25,6 +25,6 @@ const Link: React.SFC<LinkProps> = ({
       />
     </ActiveIndicator>
   );
-}
+};
 
 export default Link;

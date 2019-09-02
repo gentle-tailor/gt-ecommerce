@@ -25,7 +25,7 @@ const Container: React.SFC<ContainerProps> = ({
         {children}
       </Link>
     </Hover.Provider>
-  )
+  );
 };
 
 export default Container;

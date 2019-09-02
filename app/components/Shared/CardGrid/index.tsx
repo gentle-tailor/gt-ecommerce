@@ -4,6 +4,6 @@ import Column from './Column';
 export default Object.assign(
   Container,
   {
-    Column
+    Column,
   }
 );

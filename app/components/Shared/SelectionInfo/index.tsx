@@ -8,6 +8,6 @@ export default Object.assign(
   {
     Category,
     Name,
-    Price
+    Price,
   }
 );

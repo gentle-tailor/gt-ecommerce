@@ -10,7 +10,7 @@ type PathLoggerProps = (
 const PathLogger: React.SFC<PathLoggerProps> = ({
   location: {
     state = {},
-  }
+  },
 }) => (
   <div>
     <Label>

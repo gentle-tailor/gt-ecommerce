@@ -6,6 +6,6 @@ export default Object.assign(
   Container,
   {
     Media,
-    Meta
+    Meta,
   }
 );

@@ -6,7 +6,7 @@ type PanelGroupProps = {
   children: React.ReactNode;
   panelCount: number;
   activeIndex: number;
-}
+};
 
 const PanelGroup: React.SFC<PanelGroupProps> = ({
   children,
@@ -17,6 +17,6 @@ const PanelGroup: React.SFC<PanelGroupProps> = ({
       {children}
     </Slider>
   </Container>
-)
+);
 
 export default PanelGroup;
