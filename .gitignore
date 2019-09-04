@@ -1,4 +1,4 @@
 .vscode
 dist
 node_modules
-service-account
+service-account.json
