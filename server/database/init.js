@@ -1,7 +1,10 @@
 const R = require('ramda');
 const admin = require('firebase-admin');
-const config = require('./config');
+const config = require('../../service-account');
 
 module.exports = R.once(() => {
-  admin.initializeApp(config)
-});
+  admin.initializeApp({
+    credential: admin.credential.cert(config),
+    databaseURL: "https://gt-ecommerce.firebaseio.com"
+  });
+})
