@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "yarn start:development",
-    "start:development": "cross-env NODE_ENV=development node server",
-    "start:production": "cross-env NODE_ENV=production node server",
+    "start:development": "cross-env NODE_ENV=development GOOGLE_APPLICATION_CREDENTIALS=./service-account.json node server",
+    "start:production": "cross-env NODE_ENV=production GOOGLE_APPLICATION_CREDENTIALS=./service-account.json node server",
     "build": "yarn build:production",
     "build:development": "cross-env NODE_ENV=development webpack --config  webpack.config",
     "build:production": "cross-env NODE_ENV=production webpack --config  webpack.config",
@@ -60,6 +60,7 @@
     "cross-env": "5.2.0",
     "emotion": "10.0.14",
     "express": "4.17.1",
+    "firebase-admin": "8.4.0",
     "ramda": "0.26.1",
     "react": "16.8.6",
     "react-dom": "16.8.6",
