@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "yarn start:development",
-    "start:development": "cross-env NODE_ENV=development GOOGLE_APPLICATION_CREDENTIALS=./service-account.json node server",
-    "start:production": "cross-env NODE_ENV=production GOOGLE_APPLICATION_CREDENTIALS=./service-account.json node server",
+    "start:development": "cross-env NODE_ENV=development node server",
+    "start:production": "cross-env NODE_ENV=production node server",
     "build": "yarn build:production",
     "build:development": "cross-env NODE_ENV=development webpack --config  webpack.config",
     "build:production": "cross-env NODE_ENV=production webpack --config  webpack.config",
