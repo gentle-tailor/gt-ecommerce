@@ -3,3 +3,5 @@ dist
 node_modules
 service-account.json
 cms-access.json
+server.cert
+server.key
