@@ -1,14 +1,24 @@
-import styled from '@emotion/styled';
+import * as styles from './styles';
+import React from 'react';
+import { cx, css } from 'emotion';
 
 type HeaderProps = {
+  children: React.ReactNode;
   align?: 'left' | 'right' | 'center';
 };
 
-const Header = styled('div')<HeaderProps>`
-  text-align: ${props => props.align || 'center'};
-  padding: 0 36px;
-  padding-bottom: 32px;
-  width: 100%;
-`;
+const Header: React.SFC<HeaderProps> = ({
+  children,
+  align = 'center',
+}) => (
+  <div
+    className={cx(
+      styles.base,
+      css`text-align: ${align};`
+    )}
+  >
+    {children}
+  </div>
+);
 
 export default Header;

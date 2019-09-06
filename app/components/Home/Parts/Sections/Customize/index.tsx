@@ -20,7 +20,7 @@ const CUSTOMIZE: React.SFC = () => (
           </p>
         </Description>
       </Primary.Meta>
-      <Primary.Media/ >
+      <Primary.Media />
     </Primary>
   </React.Fragment>
 );

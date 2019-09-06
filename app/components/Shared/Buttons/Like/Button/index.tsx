@@ -1,19 +1,21 @@
-import styled from '@emotion/styled';
+import * as styles from './styles'
+import React from 'react';
 
-type ContainerProps = {
+type ButtonProps = {
+  children: React.ReactNode;
   onClick?: () => void;
 };
 
-const Container = styled('button')<ContainerProps>`
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 10px;
-  border: 1px solid #E5E5E5;
-  border-radius: 7px;
+const Button: React.SFC<ButtonProps> = ({
+  children,
+  onClick,
+}) => (
+  <button
+    className={styles.base}
+    onClick={onClick}
+  >
+    {children}
+  </button>
+);
 
-  & > :not(:last-child) {
-    margin-right: 0.7em;
-  }
-`;
-
-export default Container;
+export default Button;

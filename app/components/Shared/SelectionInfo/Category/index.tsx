@@ -1,14 +1,19 @@
+import * as styles from './styles';
 import React from 'react';
-import styled from '@emotion/styled';
+import { cx } from 'emotion';
 
 type CategoryProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
-const Category = styled('div')<CategoryProps>`
-  grid-column: 1;
-  align-self: center;
-  padding-right: 2rem;
-`;
+const Category: React.SFC<CategoryProps> = ({
+  children,
+  className,
+}) => (
+  <div className={cx(className, styles.base)}>
+    {children}
+  </div>
+);
 
 export default Category;

@@ -52,7 +52,6 @@
   },
   "dependencies": {
     "@emotion/core": "10.0.15",
-    "@emotion/styled": "10.0.15",
     "@types/react-router-dom": "4.3.4",
     "body-parser": "1.19.0",
     "consola": "2.9.0",

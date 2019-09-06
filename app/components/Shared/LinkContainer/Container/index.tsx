@@ -1,5 +1,5 @@
+import * as styles from './styles';
 import React from 'react';
-import { css } from 'emotion';
 import { Link, LinkProps } from 'react-router-dom';
 import useHover from 'hooks/useHover';
 import Hover from 'containers/Misc/Contexts/Hover';
@@ -18,7 +18,7 @@ const Container: React.SFC<ContainerProps> = ({
     <Hover.Provider value={{ hovered }}>
       <Link
         {...rest}
-        className={css`width: 100%;`}
+        className={styles.base}
         onMouseOver={handlers.onHoverOver}
         onMouseOut={handlers.onHoverOut}
       >

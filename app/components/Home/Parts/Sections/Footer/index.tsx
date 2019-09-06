@@ -1,14 +1,24 @@
-import styled from '@emotion/styled';
+import * as styles from './styles';
+import React from 'react';
+import { cx, css } from 'emotion';
 
 type FooterProps = {
+  children: React.ReactNode;
   align?: 'left' | 'right' | 'center';
 };
 
-const Footer = styled('div')<FooterProps>`
-  text-align: ${props => props.align || 'center'};
-  padding: 0 36px;
-  padding-top: 32px;
-  width: 100%;
-`;
+const Footer: React.SFC<FooterProps> = ({
+  children,
+  align = 'center',
+}) => (
+  <div
+    className={cx(
+      styles.base,
+      css`text-align: ${align};`
+    )}
+  >
+    {children}
+  </div>
+);
 
 export default Footer;

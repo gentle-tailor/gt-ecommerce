@@ -1,5 +1,7 @@
+import * as styles from './styles';
+import React from 'react';
 import * as R from 'ramda';
-import styled from '@emotion/styled';
+import { cx, css } from 'emotion';
 import Inner from 'components/Shared/Section';
 
 type SectionProps = {
@@ -13,11 +15,18 @@ const alignment = R.cond([
   [R.T, R.always('center')],
 ]);
 
-const Section = styled(Inner)<SectionProps>`
-  display: flex;
-  flex-direction: column;
-  align-items: ${props => alignment(props.align)};
-  width: 100%;
-`;
+const Section: React.SFC<SectionProps> = ({
+  children,
+  align,
+}) => (
+  <Inner
+    className={cx(
+      styles.base,
+      css`align-items: ${alignment(align)};`
+    )}
+  >
+    {children}
+  </Inner>
+);
 
 export default Section;

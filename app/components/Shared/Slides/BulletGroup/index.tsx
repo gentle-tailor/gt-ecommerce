@@ -1,18 +1,19 @@
-import styled from '@emotion/styled';
+import * as styles from './styles';
+import React from 'react';
+import { cx } from 'emotion';
 
 type BulletGroupProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
-const BulletGroup = styled('div')<BulletGroupProps>`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  & > :not(:last-child) {
-    margin-right: 3vw;
-  }
-`;
+const BulletGroup: React.SFC<BulletGroupProps> = ({
+  children,
+  className,
+}) => (
+  <div className={cx(className, styles.base)}>
+    {children}
+  </div>
+);
 
 export default BulletGroup;

@@ -1,12 +1,19 @@
-import styled from '@emotion/styled';
+import * as styles from './styles';
+import React from 'react';
+import { cx } from 'emotion';
 
 type ContentProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
-const Content = styled('div')<ContentProps>`
-  margin-top: 100px;
-  padding: 0 16px;
-`;
+const Content: React.SFC<ContentProps> = ({
+  children,
+  className,
+}) => (
+  <div className={cx(className, styles.base)}>
+    {children}
+  </div>
+);
 
 export default Content;

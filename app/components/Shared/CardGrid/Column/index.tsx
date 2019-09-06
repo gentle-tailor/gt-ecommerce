@@ -1,12 +1,19 @@
-import styled from '@emotion/styled';
+import * as styles from './styles';
+import React from 'react';
+import { cx } from 'emotion';
 
 type ColumnProps = {
   children: React.ReactNode;
   className?: string;
 };
 
-const Column = styled('div')<ColumnProps>`
-  flex-basis: 21.5rem;
-`;
+const Column: React.SFC<ColumnProps> = ({
+  children,
+  className,
+}) => (
+  <div className={cx(className, styles.base)}>
+    {children}
+  </div>
+);
 
 export default Column;

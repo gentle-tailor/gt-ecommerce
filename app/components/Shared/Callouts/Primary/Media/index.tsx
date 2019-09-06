@@ -1,8 +1,15 @@
-import styled from '@emotion/styled';
+import * as styles from './styles';
+import React from 'react';
+import { cx } from 'emotion';
 
-const Media = styled('div')`
-  flex: 4;
-  height: 100%;
-`;
+type MediaProps = {
+  className?: string;
+};
+
+const Media: React.SFC<MediaProps> = ({
+  className,
+}) => (
+  <div className={cx(className, styles.base)} />
+);
 
 export default Media;

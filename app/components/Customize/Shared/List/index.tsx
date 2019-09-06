@@ -1,19 +1,19 @@
-import styled from '@emotion/styled';
+import * as styles from './styles';
+import React from 'react';
+import { cx } from 'emotion';
 
 type ListProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
-const List = styled('div')<ListProps>`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-
-  & > :not(:last-child) {
-    margin-bottom: 2em;
-  }
-`;
+const List: React.SFC<ListProps> = ({
+  children,
+  className,
+}) => (
+  <div className={cx(className, styles.base)}>
+    {children}
+  </div>
+);
 
 export default List;

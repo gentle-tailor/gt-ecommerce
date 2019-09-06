@@ -1,14 +1,19 @@
-import styled from '@emotion/styled';
+import * as styles from './styles';
+import React from 'react';
+import { cx } from 'emotion';
 
-const Secondary = styled('div')`
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-content: space-between;
+type SecondaryProps = {
+  children: React.ReactNode;
+  className?: string;
+};
 
-  & > * {
-    margin: quto;
-  }
-`;
+const Secondary: React.SFC<SecondaryProps> = ({
+  children,
+  className,
+}) => (
+  <div className={cx(className, styles.base)}>
+    {children}
+  </div>
+);
 
 export default Secondary;

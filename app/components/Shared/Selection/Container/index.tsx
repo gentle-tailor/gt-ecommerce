@@ -1,20 +1,19 @@
-import styled from '@emotion/styled';
+import * as styles from './styles';
+import React from 'react';
+import { cx } from 'emotion';
 
 type ContainerProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
-const Container = styled('div')<ContainerProps>`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end;
-  width: 100%;
-  height: 100%;
-
-  & > :not(:last-child) {
-    margin-right: 3rem;
-  }
-`;
+const Container: React.SFC<ContainerProps> = ({
+  children,
+  className,
+}) => (
+  <div className={cx(className, styles.base)}>
+    {children}
+  </div>
+);
 
 export default Container;

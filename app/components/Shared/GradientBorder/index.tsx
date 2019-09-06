@@ -1,8 +1,19 @@
-import styled from '@emotion/styled';
+import * as styles from './styles';
+import React from 'react';
+import { cx } from 'emotion';
 
-const GradientBorder = styled('div')`
-  background: #fff;
-  border: 12px solid #f4efef;
-`;
+type GradientBorderProps = {
+  children?: React.ReactNode;
+  className?: string;
+};
+
+const GradientBorder: React.SFC<GradientBorderProps> = ({
+  children,
+  className,
+}) => (
+  <div className={cx(className, styles.base)}>
+    {children}
+  </div>
+);
 
 export default GradientBorder;

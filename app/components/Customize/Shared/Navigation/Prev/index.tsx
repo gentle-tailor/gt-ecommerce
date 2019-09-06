@@ -1,12 +1,19 @@
-import styled from '@emotion/styled';
+import * as styles from './styles';
+import React from 'react';
+import { cx } from 'emotion';
 
 type PrevProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
-const Prev = styled('div')<PrevProps>`
-  grid-column: 1;
-  text-align: left;
-`;
+const Prev: React.SFC<PrevProps> = ({
+  children,
+  className,
+}) => (
+  <div className={cx(className, styles.base)}>
+    {children}
+  </div>
+);
 
 export default Prev;

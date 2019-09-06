@@ -1,14 +1,19 @@
+import * as styles from './styles';
 import React from 'react';
-import styled from '@emotion/styled';
+import { cx } from 'emotion';
 
 type PriceProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
-const Price = styled('div')<PriceProps>`
-  grid-column: 3;
-  align-self: center;
-  text-align: right;
-`;
+const Price: React.SFC<PriceProps> = ({
+  children,
+  className,
+}) => (
+  <div className={cx(className, styles.base)}>
+    {children}
+  </div>
+);
 
 export default Price;
