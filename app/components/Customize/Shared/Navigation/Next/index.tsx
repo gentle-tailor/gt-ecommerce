@@ -1,12 +1,19 @@
-import styled from '@emotion/styled';
+import * as styles from './styles';
+import React from 'react';
+import { cx } from 'emotion';
 
 type NextProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
-const Next = styled('div')<NextProps>`
-  grid-column: 2;
-  text-align: right;
-`;
+const Next: React.SFC<NextProps> = ({
+  children,
+  className,
+}) => (
+  <div className={cx(className, styles.base)}>
+    {children}
+  </div>
+);
 
 export default Next;
