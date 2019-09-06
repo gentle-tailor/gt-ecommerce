@@ -1,8 +1,19 @@
-import styled from '@emotion/styled';
+import * as styles from './styles';
+import React from 'react';
+import { cx } from 'emotion';
 
-const Divider = styled('div')`
-  width: 100%;
-  margin-bottom: 80px;
-`;
+type DividerProps = {
+  children?: React.ReactNode;
+  className?: string;
+};
+
+const Divider: React.SFC<DividerProps> = ({
+  children,
+  className,
+}) => (
+  <div className={cx(className, styles.base)}>
+    {children}
+  </div>
+);
 
 export default Divider;
