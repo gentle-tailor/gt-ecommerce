@@ -1,14 +1,19 @@
-import styled from '@emotion/styled';
-import { zIndex } from 'styles/constants';
+import * as styles from './styles';
+import React from 'react';
+import { cx } from 'emotion';
 
-const Header = styled('header')`
-  z-index: ${zIndex.header};
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  padding: 10px 0 0 0;
-  background-color: #fff;
-`;
+type HeaderProps = {
+  children: React.ReactNode;
+  className?: string;
+};
+
+const Header: React.SFC<HeaderProps> = ({
+  children,
+  className,
+}) => (
+  <header className={cx(className, styles.base)}>
+    {children}
+  </header>
+);
 
 export default Header;

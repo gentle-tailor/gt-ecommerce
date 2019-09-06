@@ -19,16 +19,11 @@ const alignment = ([x, y]: React.ReactNode[]) => ([
   ])(y),
 ]);
 
-const alignChildren = R.compose(
-  alignment,
-  R.take<React.ReactNode>(2)
-);
-
 const Secondary: React.SFC<SecondaryProps> = ({
   children,
 }) => (
   <Container>
-    {alignChildren(React.Children.toArray(children))}
+    {alignment(R.take(2, React.Children.toArray(children)))}
   </Container>
 );
 

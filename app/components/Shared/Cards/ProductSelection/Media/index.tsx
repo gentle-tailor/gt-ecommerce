@@ -1,16 +1,19 @@
-import styled from '@emotion/styled';
+import * as styles from './styles';
+import React from 'react';
+import { cx } from 'emotion';
 
 type MediaProps = {
   children: React.ReactNode;
   className?: string;
 };
 
-const Media = styled('div')<MediaProps>`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  grid-row: 2;
-  align-self: center;
-`;
+const Media: React.SFC<MediaProps> = ({
+  children,
+  className,
+}) => (
+  <div className={cx(className, styles.base)}>
+    {children}
+  </div>
+);
 
 export default Media;

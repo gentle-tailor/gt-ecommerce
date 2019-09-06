@@ -1,10 +1,19 @@
-import styled from '@emotion/styled';
+import * as styles from './styles';
+import React from 'react';
+import { cx } from 'emotion';
 
-const Label = styled('span')`
-  max-width: 50px;
-  white-space: normal;
-  word-break: break-word;
-  text-align: center;
-`;
+type LabelProps = {
+  children: React.ReactNode;
+  className?: string;
+};
+
+const Label: React.SFC<LabelProps> = ({
+  children,
+  className,
+}) => (
+  <span className={cx(className, styles.base)}>
+    {children}
+  </span>
+);
 
 export default Label;

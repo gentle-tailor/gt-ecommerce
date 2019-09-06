@@ -1,10 +1,20 @@
-import styled from '@emotion/styled';
+import * as styles from './styles';
+import React from 'react';
+import { cx } from 'emotion';
 import GradientBox from 'components/Shared/GradientBox';
 
-const Media = styled(GradientBox)`
-  width: 100%;
-  height: 190px;
-  border-radius: 7px;
-`;
+type MediaProps = {
+  children?: React.ReactNode;
+  className?: string;
+};
+
+const Media: React.SFC<MediaProps> = ({
+  children,
+  className,
+}) => (
+  <GradientBox className={cx(className, styles.base)}>
+    {children}
+  </GradientBox>
+);
 
 export default Media;

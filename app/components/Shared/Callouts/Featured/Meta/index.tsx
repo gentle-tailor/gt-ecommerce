@@ -1,18 +1,19 @@
-import styled from '@emotion/styled';
+import * as styles from './styles';
+import React from 'react';
+import { cx } from 'emotion';
 
-const Meta = styled('div')`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  height: 400px;
-  width: 400px;
-`;
+type MetaProps = {
+  children: React.ReactNode;
+  className?: string;
+};
+
+const Meta: React.SFC<MetaProps> = ({
+  children,
+  className,
+}) => (
+  <div className={cx(className, styles.base)}>
+    {children}
+  </div>
+);
 
 export default Meta;

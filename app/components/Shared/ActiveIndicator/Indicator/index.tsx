@@ -1,20 +1,22 @@
-import styled from '@emotion/styled';
+import * as styles from './styles';
+import React from 'react';
+import { cx } from 'emotion';
 
 type IndicatorProps = {
   active: boolean;
+  className?: string;
 };
 
-const Indicator = styled('span')<IndicatorProps>`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: ${props => props.active ? '70%' : '0%'};
-  border-bottom: 2px solid;
-  transition: width 0.25s;
-
-  &:hover {
-    width: 70%;
-  }
-`;
+const Indicator: React.SFC<IndicatorProps> = ({
+  active,
+  className,
+}) => (
+  <span
+    className={cx(
+      className,
+      active ? styles.active : styles.base
+    )}
+  />
+);
 
 export default Indicator;

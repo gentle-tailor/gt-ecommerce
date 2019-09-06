@@ -1,13 +1,19 @@
+import * as styles from './styles';
 import React from 'react';
-import styled from '@emotion/styled';
+import { cx } from 'emotion';
 
 type NameProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
-const Name = styled('div')<NameProps>`
-  grid-column: 2;
-  align-self: center;
-`;
+const Name: React.SFC<NameProps> = ({
+  children,
+  className,
+}) => (
+  <div className={cx(className, styles.base)}>
+    {children}
+  </div>
+);
 
 export default Name;

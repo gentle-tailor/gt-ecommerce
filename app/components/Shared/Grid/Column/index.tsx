@@ -1,3 +1,4 @@
+import * as styles from './styles';
 import React, { useContext } from 'react';
 import { cx, css } from 'emotion';
 import Count, { CountContextRenderProps } from 'containers/Misc/Contexts/Count';
@@ -17,12 +18,14 @@ const Column: React.SFC<ColumnProps> = ({
 
   return (
     <div
-      className={cx(className, css`
-        display: inline-block;
-        width: ${100 * (width / (count || width))}%;
-        flex: 0 0 ${100 * (width / (count || width))};
-        padding: 0 10px 20px 10px;
-      `)}
+      className={cx(
+        className,
+        styles.base,
+        css`
+          width: ${100 * (width / (count || width))}%;
+          flex: 0 0 ${100 * (width / (count || width))};
+        `
+      )}
     >
       {children}
     </div>

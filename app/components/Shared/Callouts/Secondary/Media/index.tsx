@@ -1,29 +1,35 @@
-import { isValidElement } from 'react';
-import styled from '@emotion/styled';
+import * as styles from './styles';
+import React from 'react';
+import { cx } from 'emotion';
 import GradientBorder from 'components/Shared/GradientBorder';
 
 type MediaProps = {
+  children?: React.ReactNode;
   align?: 'left' | 'right';
   mode?: 'wire' | 'bald';
+  className?: string;
 };
 
-const Media = styled(GradientBorder)<MediaProps>`
-  position: absolute;
-  width: 460px;
-  height: 100%;
-  ${props => (
-    props.mode === 'bald' &&
-    'border: 0 !important;'
-  )}
-  ${props => (
-    props.align === 'left'
-      ? 'left: 0;'
-      : 'right: 0;'
-  )}
-`;
+const Media: React.SFC<MediaProps> = ({
+  children,
+  align,
+  mode,
+  className,
+}) => (
+  <GradientBorder
+    className={cx(
+      className,
+      styles.base,
+      mode === 'bald' && styles.bald,
+      align === 'left' ? styles.left : styles.right
+    )}
+  >
+    {children}
+  </GradientBorder>
+);
 
 export const isMedia = (child: React.ReactChild): child is React.ReactElement<MediaProps> => (
-  isValidElement(child) && child.type === Media
+  React.isValidElement(child) && child.type === Media
 );
 
 export default Media;

@@ -1,6 +1,17 @@
-import styled from '@emotion/styled';
+import React from 'react';
 
-const Primary = styled('div')`
-`;
+type PrimaryProps = {
+  children: React.ReactNode;
+  className?: string;
+};
+
+const Primary: React.SFC<PrimaryProps> = ({
+  children,
+  className,
+}) => (
+  <div className={className}>
+    {children}
+  </div>
+);
 
 export default Primary;

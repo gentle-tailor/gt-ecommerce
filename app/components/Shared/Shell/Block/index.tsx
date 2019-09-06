@@ -1,9 +1,19 @@
-import styled from '@emotion/styled';
+import * as styles from './styles';
+import React from 'react';
+import { cx } from 'emotion';
 
-const Block = styled('div')`
-  & > :not(:last-child) {
-    margin-right: 4em;
-  }
-`;
+type BlockProps = {
+  children: React.ReactNode;
+  className?: string;
+};
+
+const Block: React.SFC<BlockProps> = ({
+  children,
+  className,
+}) => (
+  <div className={cx(className, styles.base)}>
+    {children}
+  </div>
+);
 
 export default Block;

@@ -1,6 +1,7 @@
+import * as styles from './styles';
 import React from 'react';
 import * as R from 'ramda';
-import { cx, css } from 'emotion';
+import { cx } from 'emotion';
 import { isColumn } from '../Column';
 import Count from 'containers/Misc/Contexts/Count';
 
@@ -22,13 +23,7 @@ const Row: React.SFC<RowProps> = ({
   children,
   className,
 }) => (
-  <div
-    className={cx(className, css`
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-    `)}
-  >
+  <div className={cx(className, styles.base)}>
     <Count.Provider value={{ count: count(React.Children.toArray(children)) }}>
       {children}
     </Count.Provider>

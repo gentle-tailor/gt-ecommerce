@@ -1,9 +1,9 @@
-import styled from '@emotion/styled';
+import * as styles from './styles';
+import React from 'react';
 import GradientBox from 'components/Shared/GradientBox';
 
-const Media = styled(GradientBox)`
-  width: 70px;
-  height: 70px;
-`;
+const Media: React.SFC = () => (
+  <GradientBox className={styles.base} />
+);
 
 export default Media;

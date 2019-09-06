@@ -1,13 +1,19 @@
-import styled from '@emotion/styled';
+import * as styles from './styles';
+import React from 'react';
+import { cx } from 'emotion';
 
 type ContainerProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
-const Container = styled('span')<ContainerProps>`
-  display: inline-block;
-  position: relative;
-  min-height: 20px;
-`;
+const Container: React.SFC<ContainerProps> = ({
+  children,
+  className,
+}) => (
+  <div className={cx(className, styles.base)}>
+    {children}
+  </div>
+);
 
 export default Container;

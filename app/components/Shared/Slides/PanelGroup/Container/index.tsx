@@ -1,14 +1,20 @@
-import styled from '@emotion/styled';
+import * as styles from './styles';
+import React from 'react';
+import { cx } from 'emotion';
 import GradientBorder from 'components/Shared/GradientBorder';
 
 type ContainerProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
-const Container = styled(GradientBorder)<ContainerProps>`
-  width: 100%;
-  height: 90%;
-  overflow: hidden;
-`;
+const Container: React.SFC<ContainerProps> = ({
+  children,
+  className,
+}) => (
+  <GradientBorder className={cx(className, styles.base)}>
+    {children}
+  </GradientBorder>
+);
 
 export default Container;

@@ -1,6 +1,17 @@
-import styled from '@emotion/styled';
+import React from 'react';
 
-const Description = styled('div')`
-`;
+type DescriptionProps = {
+  children: React.ReactNode;
+  className?: string;
+};
+
+const Description: React.SFC<DescriptionProps> = ({
+  children,
+  className,
+}) => (
+  <div className={className}>
+    {children}
+  </div>
+);
 
 export default Description;
