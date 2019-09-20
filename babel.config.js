@@ -17,7 +17,11 @@ const config = _ => ({
       '@babel/preset-react',  
     ]
   ],
-  plugins: [],
+  plugins: [
+    [
+      '@babel/transform-runtime'
+    ]
+  ],
 });
 
 module.exports = compose(

@@ -1,4 +1,7 @@
 import React from 'react';
+import * as R from 'ramda';
+import { Target } from 'types/animation';
+import { createRefMap } from './utils/ref';
 
 type TransitionProps = {
   children: React.ReactNode;
@@ -14,31 +17,28 @@ type TransitionState = {
 };
 
 type Animation = (
-  (node: any) => Promise<null>
+  (node: Target) => Promise<void>
 );
 
 type Status = (
-  'mounting' | 'mounted' | 'unmounting' | 'unmounted'
+  'mounting' |
+  'mounted' |
+  'unmounting' |
+  'unmounted'
 );
 
 class Transition extends React.Component<TransitionProps, TransitionState> {
-  ref = React.createRef<any>();
-  state = {
-    status: (
-      this.props.in
-        ? 'mounting'
-        : 'unmounted'
-    ) as Status,
-  };
+  refMap = createRefMap();
+  state = { status: (this.props.in ? 'mounting' : 'unmounted') as Status };
 
-  static getDerivedStateFromProps(props: TransitionProps) {
-    return {
-      status: (
-        props.in
-          ? 'mounting'
-          : 'unmounting'
-      ) as Status,
-    };
+  // really?
+  static getDerivedStateFromProps(props: TransitionProps, { status }: TransitionState) {
+    return R.cond([
+      [R.equals('mounting'), R.always({ status: props.in ? 'mounting' : 'unmounting' }) ],
+      [R.equals('mounted'), R.always({ status: props.in ? 'mounted' : 'unmounting' }) ],
+      [R.equals('unmounting'), R.always({ status: props.in ? 'mounting' : 'unmounting' }) ],
+      [R.equals('unmounted'), R.always({ status: props.in ? 'mounting' : 'unmounted' }) ],
+    ])(status);
   }
 
   componentDidMount() {
@@ -99,18 +99,20 @@ class Transition extends React.Component<TransitionProps, TransitionState> {
 
   animate(animation: Animation) {
     return (
-      this.ref.current
-        ? animation(this.ref.current.node)
+      this.refMap.length()
+        ? animation(this.refMap.flatten())
         : Promise.resolve(null)
     );
   }
 
-  renderChild() {
-    return React.cloneElement(
-      React.Children.only(
-        this.props.children
-      ) as any,
-      { ref: this.ref }
+  renderChildren() {
+    return React.Children.map(
+      this.props.children,
+      (child, id) => (
+        React.isValidElement(child)
+          ? React.cloneElement(child, { ref: this.refMap.get(id) })
+          : child
+      )
     );
   }
 
@@ -118,7 +120,7 @@ class Transition extends React.Component<TransitionProps, TransitionState> {
     return (
       this.state.status === 'unmounted'
         ? null
-        : this.renderChild()
+        : this.renderChildren()
     );
   }
 }

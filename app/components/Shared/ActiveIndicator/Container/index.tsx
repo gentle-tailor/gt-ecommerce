@@ -11,9 +11,9 @@ const Container: React.SFC<ContainerProps> = ({
   children,
   className,
 }) => (
-  <div className={cx(className, styles.base)}>
+  <span className={cx(className, styles.base)}>
     {children}
-  </div>
+  </span>
 );
 
 export default Container;
