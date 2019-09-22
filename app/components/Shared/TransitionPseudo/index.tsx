@@ -3,21 +3,26 @@ import * as R from 'ramda';
 import { Target } from 'types/animation';
 import { createRefMap } from 'utils/ref';
 
-type TransitionProps = {
+type TransitionPseudoProps = {
   children: React.ReactNode;
   in: boolean;
+  setup: Setup;
   start: Animation;
   exit: Animation;
   onMounted?: () => void;
   onUnmounted?: () => void;
 };
 
-type TransitionState = {
+type TransitionPseudoState = {
   status: Status;
 };
 
 type Animation = (
   (node: Target) => Promise<void>
+);
+
+type Setup = (
+  (node: Target) => void
 );
 
 type Status = (
@@ -27,12 +32,12 @@ type Status = (
   'unmounted'
 );
 
-class Transition extends React.Component<TransitionProps, TransitionState> {
+class TransitionPseudo extends React.Component<TransitionPseudoProps, TransitionPseudoState> {
   refMap = createRefMap();
   state = { status: (this.props.in ? 'mounting' : 'unmounted') as Status };
 
   // really?
-  static getDerivedStateFromProps(props: TransitionProps, { status }: TransitionState) {
+  static getDerivedStateFromProps(props: TransitionPseudoProps, { status }: TransitionPseudoState) {
     return R.cond([
       [R.equals('mounting'), R.always({ status: props.in ? 'mounting' : 'unmounting' }) ],
       [R.equals('mounted'), R.always({ status: props.in ? 'mounted' : 'unmounting' }) ],
@@ -42,10 +47,12 @@ class Transition extends React.Component<TransitionProps, TransitionState> {
   }
 
   componentDidMount() {
-    this.onUpdateStatus();
+    if (!this.props.in) {
+      this.setup();
+    }
   }
 
-  componentDidUpdate(_: TransitionProps, prevState: TransitionState) {
+  componentDidUpdate(_: TransitionPseudoProps, prevState: TransitionPseudoState) {
     const { status: prevStatus } = prevState;
     const { status: currStatus } = this.state;
 
@@ -88,6 +95,7 @@ class Transition extends React.Component<TransitionProps, TransitionState> {
   }
 
   start = async () => {
+    this.setup();
     await this.animate(this.props.start);
     this.onMounted();
   }
@@ -95,6 +103,14 @@ class Transition extends React.Component<TransitionProps, TransitionState> {
   exit = async () => {
     await this.animate(this.props.exit);
     this.onUnmounted();
+  }
+
+  setup() {
+    return (
+      this.refMap.length()
+        ? this.props.setup(this.refMap.flatten())
+        : undefined
+    );
   }
 
   animate(animation: Animation) {
@@ -118,11 +134,9 @@ class Transition extends React.Component<TransitionProps, TransitionState> {
 
   render() {
     return (
-      this.state.status === 'unmounted'
-        ? null
-        : this.renderChildren()
+      this.renderChildren()
     );
   }
 }
 
-export default Transition;
+export default TransitionPseudo;

@@ -3,9 +3,10 @@ import * as R from 'ramda';
 import { Target } from 'types/animation';
 import { opposite } from 'utils/directions';
 import slide, { Params } from 'animations/slide';
-import Transition from 'components/Shared/Transition';
+import TransitionPseudo from 'components/Shared/TransitionPseudo';
 
 const animations = (() => ({
+  setup: slide.setup,
   start: (
     node: Target,
     params: Params
@@ -38,7 +39,7 @@ const animations = (() => ({
   },
 }))();
 
-export type SlideProps = {
+export type SlidePseudoProps = {
   children: React.ReactNode;
   in: boolean;
   directionIn: Params['direction'];
@@ -46,19 +47,20 @@ export type SlideProps = {
   duration?: number;
 };
 
-const Slide: React.SFC<SlideProps> = ({
+const SlidePseudo: React.SFC<SlidePseudoProps> = ({
   children,
   directionIn,
   directionOut,
   ...rest
 }) => (
-  <Transition
+  <TransitionPseudo
     in={rest.in}
+    setup={R.partialRight(animations.setup, [{ direction: directionIn, ...rest }])}
     start={R.partialRight(animations.start, [{ direction: directionIn, ...rest }])}
     exit={R.partialRight(animations.exit, [{ direction: directionOut, ...rest }])}
   >
     {children}
-  </Transition>
+  </TransitionPseudo>
 );
 
-export default Slide;
+export default SlidePseudo;

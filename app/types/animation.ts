@@ -5,6 +5,10 @@ export type Animation<P = {}> = (
   (target: Target, params: P) => AnimeInstance
 );
 
+export type AnimationSetup<P = {}> = (
+  (target: Target, params: P) => void
+);
+
 export type Target = (
   AnimeAnimParams['targets']
 );
