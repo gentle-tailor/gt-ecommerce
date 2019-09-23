@@ -11,3 +11,8 @@ export const getProperty = R.cond([
   [R.either(R.equals('up'), R.equals('down')), R.always('translateY')],
   [R.either(R.equals('left'), R.equals('right')), R.always('translateX')],
 ]);
+
+export const getPerpendicularProperty = R.cond([
+  [R.either(R.equals('up'), R.equals('down')), R.always('translateX')],
+  [R.either(R.equals('left'), R.equals('right')), R.always('translateY')],
+]);

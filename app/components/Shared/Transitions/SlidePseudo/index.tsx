@@ -45,6 +45,7 @@ export type SlidePseudoProps = {
   directionIn: Params['direction'];
   directionOut: Params['direction'];
   duration?: number;
+  delay?: number;
 };
 
 const SlidePseudo: React.SFC<SlidePseudoProps> = ({

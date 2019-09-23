@@ -1,7 +1,7 @@
 import anime from 'animejs';
 import * as Animation from 'types/animation';
 import { opposite } from 'utils/directions';
-import { getOffset, getProperty } from './utils/attribute';
+import * as attribute from './utils/attribute';
 
 export type Params = Animation.AnimationParams<{
   direction: Animation.Direction;
@@ -17,7 +17,8 @@ const setup: Animation.AnimationSetup<Params> = (
     anime.set(
       targets,
       {
-        [getProperty(direction)]: getOffset(opposite(direction)),
+        [attribute.getPerpendicularProperty(direction)]: 0,
+        [attribute.getProperty(direction)]: attribute.getOffset(opposite(direction)),
       }
     );
   }
@@ -33,10 +34,11 @@ const slideIn: Animation.Animation<Params> = (
   setup(targets, { direction });
 
   return anime({
-    targets,
-    delay: anime.stagger(100),
-    [getProperty(direction)]: '0',
     ...rest,
+    targets,
+    easing: 'easeInOutCirc',
+    delay: anime.stagger(rest.delay),
+    [attribute.getProperty(direction)]: '0',
   });
 };
 
@@ -48,10 +50,11 @@ const slideOut: Animation.Animation<Params> = (
   }
 ) => {
   return anime({
-    targets,
-    delay: anime.stagger(100),
-    [getProperty(direction)]: getOffset(opposite(direction)),
     ...rest,
+    targets,
+    easing: 'easeInOutCirc',
+    delay: anime.stagger(rest.delay),
+    [attribute.getProperty(direction)]: attribute.getOffset(opposite(direction)),
   });
 };
 

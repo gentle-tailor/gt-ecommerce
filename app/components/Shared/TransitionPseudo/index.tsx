@@ -47,7 +47,9 @@ class TransitionPseudo extends React.Component<TransitionPseudoProps, Transition
   }
 
   componentDidMount() {
-    if (!this.props.in) {
+    if (this.props.in) {
+      this.onUpdateStatus();
+    } else {
       this.setup();
     }
   }

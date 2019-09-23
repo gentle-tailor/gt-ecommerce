@@ -44,6 +44,7 @@ export type SlideProps = {
   directionIn: Params['direction'];
   directionOut: Params['direction'];
   duration?: number;
+  delay?: number;
 };
 
 const Slide: React.SFC<SlideProps> = ({
