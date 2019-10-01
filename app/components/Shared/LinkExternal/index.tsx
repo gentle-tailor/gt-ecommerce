@@ -9,16 +9,22 @@ export type LinkExternalProps = {
   active?: boolean;
 };
 
-const LinkExternal: React.SFC<LinkExternalProps> = ({
-  children,
-  href,
-  target,
-  active = false,
-}) => {
+const LinkExternal = React.forwardRef<HTMLAnchorElement, LinkExternalProps>((
+  {
+    children,
+    href,
+    target,
+    active = false,
+  },
+  ref
+) => {
   const [hovered, handlers] = useHover();
 
   return (
-    <ActiveIndicator active={active || hovered}>
+    <ActiveIndicator
+      active={active || hovered}
+      ref={ref}
+    >
       <a
         href={href}
         target={target}
@@ -29,6 +35,6 @@ const LinkExternal: React.SFC<LinkExternalProps> = ({
       </a>
     </ActiveIndicator>
   );
-};
+});
 
 export default LinkExternal;

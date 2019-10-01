@@ -15,18 +15,22 @@ const alignment = R.cond([
   [R.T, R.always('center')],
 ]);
 
-const Section: React.SFC<SectionProps> = ({
-  children,
-  align,
-}) => (
+const Section = React.forwardRef<HTMLDivElement, SectionProps>((
+  {
+    children,
+    align,
+  },
+  ref
+) => (
   <Inner
     className={cx(
       styles.base,
       css`align-items: ${alignment(align)};`
     )}
+    ref={ref}
   >
     {children}
   </Inner>
-);
+));
 
 export default Section;

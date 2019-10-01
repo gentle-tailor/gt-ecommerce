@@ -9,8 +9,8 @@ type ClippedBoxProps = {
 
 const ClippedBox = React.forwardRef<any, ClippedBoxProps>((
   {
-  children,
-  className,
+    children,
+    className,
   },
   ref
 ) => (

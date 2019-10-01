@@ -7,13 +7,20 @@ type BlockProps = {
   className?: string;
 };
 
-const Block: React.SFC<BlockProps> = ({
-  children,
-  className,
-}) => (
-  <div className={cx(className, styles.base)}>
-    {children}
-  </div>
+const Block = React.forwardRef<HTMLDivElement, BlockProps>((
+  {
+    children,
+    className,
+  },
+  ref
+) => (
+    <div
+      className={cx(className, styles.base)}
+      ref={ref}
+    >
+      {children}
+    </div>
+  )
 );
 
 export default Block;

@@ -10,14 +10,20 @@ export type LinkProps = (
   }
 );
 
-const Link: React.SFC<LinkProps> = ({
-  active = false,
-  ...rest
-}) => {
+const Link = React.forwardRef<HTMLSpanElement, LinkProps>((
+  {
+    active = false,
+    ...rest
+  },
+  ref
+) => {
   const [hovered, handlers] = useHover();
 
   return (
-    <ActiveIndicator active={active || hovered}>
+    <ActiveIndicator
+      active={active || hovered}
+      ref={ref}
+    >
       <InnerLink
         {...rest}
         onMouseOver={handlers.onHoverOver}
@@ -25,6 +31,6 @@ const Link: React.SFC<LinkProps> = ({
       />
     </ActiveIndicator>
   );
-};
+});
 
 export default Link;

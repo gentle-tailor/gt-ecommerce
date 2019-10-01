@@ -7,13 +7,20 @@ type ContainerProps = {
   className?: string;
 };
 
-const Container: React.SFC<ContainerProps> = ({
-  children,
-  className,
-}) => (
-  <div className={cx(className, styles.base)}>
-    {children}
-  </div>
+const Container = React.forwardRef<HTMLDivElement, ContainerProps>((
+  {
+    children,
+    className,
+  },
+  ref
+  ) => (
+    <div
+      className={cx(className, styles.base)}
+      ref={ref}
+    >
+      {children}
+    </div>
+  )
 );
 
 export default Container;

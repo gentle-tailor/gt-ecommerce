@@ -5,10 +5,13 @@ import Link, { LinkProps } from 'components/Shared/Link';
 
 type NavLinkProps = LinkProps;
 
-const NavLink: React.SFC<NavLinkProps> = ({
-  to,
-  ...rest
-}) => (
+const NavLink = React.forwardRef<any, NavLinkProps>((
+  {
+    to,
+    ...rest
+  },
+  ref
+) => (
   <Route
     exact={true}
     path={getRoutePath(to)}
@@ -18,9 +21,10 @@ const NavLink: React.SFC<NavLinkProps> = ({
         {...rest}
         to={to}
         active={!!match}
+        ref={ref}
       />
     )}
   </Route>
-);
+));
 
 export default NavLink;

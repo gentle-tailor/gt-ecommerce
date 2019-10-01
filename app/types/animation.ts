@@ -15,7 +15,17 @@ export type Target = (
 
 export type AnimationParams<V> = (
   Omit<AnimeAnimParams, 'targets'> &
+  {
+    stagger?: number;
+  } &
   V
+);
+
+export type TransitionStatus = (
+  'mounting' |
+  'mounted' |
+  'unmounting' |
+  'unmounted'
 );
 
 export type Direction = (

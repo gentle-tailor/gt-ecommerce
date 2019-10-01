@@ -7,13 +7,19 @@ type ContainerProps = {
   className?: string;
 };
 
-const Container: React.SFC<ContainerProps> = ({
-  children,
-  className,
-}) => (
-  <span className={cx(className, styles.base)}>
+const Container = React.forwardRef<HTMLSpanElement, ContainerProps>((
+  {
+    children,
+    className,
+  },
+  ref
+) => (
+  <span
+    className={cx(className, styles.base)}
+    ref={ref}
+  >
     {children}
   </span>
-);
+));
 
 export default Container;

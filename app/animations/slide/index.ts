@@ -27,7 +27,9 @@ const setup: Animation.AnimationSetup<Params> = (
 const slideIn: Animation.Animation<Params> = (
   targets,
   {
+    stagger = 100,
     direction,
+    delay,
     ...rest
   }
 ) => {
@@ -37,7 +39,7 @@ const slideIn: Animation.Animation<Params> = (
     ...rest,
     targets,
     easing: 'easeInOutCirc',
-    delay: anime.stagger(rest.delay),
+    delay: anime.stagger(stagger, { start: delay }),
     [attribute.getProperty(direction)]: '0',
   });
 };
@@ -45,6 +47,8 @@ const slideIn: Animation.Animation<Params> = (
 const slideOut: Animation.Animation<Params> = (
   targets,
   {
+    stagger = 100,
+    delay,
     direction,
     ...rest
   }
@@ -53,7 +57,7 @@ const slideOut: Animation.Animation<Params> = (
     ...rest,
     targets,
     easing: 'easeInOutCirc',
-    delay: anime.stagger(rest.delay),
+    delay: anime.stagger(stagger, { start: delay }),
     [attribute.getProperty(direction)]: attribute.getOffset(opposite(direction)),
   });
 };

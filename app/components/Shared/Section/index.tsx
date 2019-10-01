@@ -6,19 +6,25 @@ type SectionProps = {
   className?: string;
 };
 
-const Section: React.SFC<SectionProps> = ({
-  children,
-  className,
-}) => (
+const Section = React.forwardRef<HTMLDivElement, SectionProps> ((
+  {
+    children,
+    className,
+  },
+  ref
+) => (
   <Level.Consumer>
     {({ level }) => (
       <Level.Provider value={{ level: level + 1 }}>
-        <section className={className}>
+        <section
+          className={className}
+          ref={ref}
+        >
           {children}
         </section>
       </Level.Provider>
     )}
   </Level.Consumer>
-);
+));
 
 export default Section;

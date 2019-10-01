@@ -7,19 +7,14 @@ type HeaderProps = {
   className?: string;
 };
 
-const Header = React.forwardRef<any, HeaderProps>((
-  {
-    children,
-    className,
-  },
-  ref
-) => (
-    <header
+const Header = React.forwardRef<HTMLDivElement, HeaderProps>(
+  ({ children, className }, ref) => (
+    <div
       className={cx(className, styles.base)}
       ref={ref}
     >
       {children}
-    </header>
+    </div>
   )
 );
 

@@ -3,7 +3,7 @@ import * as R from 'ramda';
 import { Target } from 'types/animation';
 import { opposite } from 'utils/directions';
 import slide, { Params } from 'animations/slide';
-import TransitionPseudo from 'components/Shared/TransitionPseudo';
+import TransitionPseudo, { TransitionPseudoProps } from 'components/Shared/TransitionPseudo';
 
 const animations = (() => ({
   setup: slide.setup,
@@ -39,26 +39,32 @@ const animations = (() => ({
   },
 }))();
 
-export type SlidePseudoProps = {
-  children: React.ReactNode;
-  in: boolean;
-  directionIn: Params['direction'];
-  directionOut: Params['direction'];
-  duration?: number;
-  delay?: number;
-};
+export type SlidePseudoProps = (
+  Pick<TransitionPseudoProps, 'status' | 'onMounted' | 'onUnmounted'> &
+  {
+    children: React.ReactNode;
+    directionIn: Params['direction'];
+    directionOut: Params['direction'];
+    duration?: number;
+    delay?: number;
+    stagger?: number;
+  }
+);
 
 const SlidePseudo: React.SFC<SlidePseudoProps> = ({
   children,
   directionIn,
   directionOut,
+  duration,
+  delay,
+  stagger,
   ...rest
 }) => (
   <TransitionPseudo
-    in={rest.in}
-    setup={R.partialRight(animations.setup, [{ direction: directionIn, ...rest }])}
-    start={R.partialRight(animations.start, [{ direction: directionIn, ...rest }])}
-    exit={R.partialRight(animations.exit, [{ direction: directionOut, ...rest }])}
+    {...rest}
+    setup={R.partialRight(animations.setup, [{ direction: directionIn, duration, delay, stagger }])}
+    start={R.partialRight(animations.start, [{ direction: directionIn, duration, delay, stagger }])}
+    exit={R.partialRight(animations.exit, [{ direction: directionOut, duration, delay, stagger }])}
   >
     {children}
   </TransitionPseudo>

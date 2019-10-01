@@ -7,14 +7,17 @@ type ActiveIndicatorProps = {
   active: boolean;
 };
 
-const ActiveIndicator: React.SFC<ActiveIndicatorProps> = ({
-  children,
-  active,
-}) => (
-  <Container>
+const ActiveIndicator = React.forwardRef<HTMLSpanElement, ActiveIndicatorProps>((
+  {
+    children,
+    active,
+  },
+  ref
+) => (
+  <Container ref={ref}>
     {children}
     <Indicator active={active} />
   </Container>
-);
+));
 
 export default ActiveIndicator;
